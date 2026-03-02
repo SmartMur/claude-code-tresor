@@ -38,10 +38,10 @@ jobs:
 
       - name: Check for Review Bypass
         id: bypass
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_LABELS: ${{ toJSON(github.event.pull_request.labels.*.name) }}
         run: |
-          PR_TITLE="${{ github.event.pull_request.title }}"
-          PR_LABELS="${{ toJSON(github.event.pull_request.labels.*.name) }}"
-
           # Check for bypass markers in PR title
           if echo "$PR_TITLE" | grep -qE '\[EMERGENCY\]|\[SKIP REVIEW\]|\[HOTFIX\]'; then
             echo "bypass=true" >> $GITHUB_OUTPUT
@@ -63,7 +63,7 @@ jobs:
 
       - name: Post Bypass Notice
         if: steps.bypass.outputs.bypass == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           script: |
             github.rest.issues.createComment({
@@ -82,14 +82,14 @@ jobs:
 
       - name: Checkout repository
         if: steps.bypass.outputs.bypass != 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 1
 
       - name: Run Claude Code Review
         if: steps.bypass.outputs.bypass != 'true'
         id: claude-review
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@9d86c9b0c946914e9c71ac5ee1c008959cbfa9af # v1
         continue-on-error: true
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -119,7 +119,7 @@ jobs:
 
       - name: Post fallback review note (quota/timeout)
         if: steps.claude-review.outcome != 'success'
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           script: |
             github.rest.issues.createComment({

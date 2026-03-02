@@ -22,17 +22,22 @@ jobs:
     steps:
       - name: Resolve ref
         id: ref
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_REF: ${{ github.event.inputs.ref }}
+          CLIENT_REF: ${{ github.event.client_payload.ref }}
+          HEAD_REF: ${{ github.head_ref || github.ref_name }}
         run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && -n "${{ github.event.inputs.ref }}" ]]; then
-            echo "target_ref=${{ github.event.inputs.ref }}" >> "$GITHUB_OUTPUT"
-          elif [[ "${{ github.event_name }}" == "repository_dispatch" && -n "${{ github.event.client_payload.ref }}" ]]; then
-            echo "target_ref=${{ github.event.client_payload.ref }}" >> "$GITHUB_OUTPUT"
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && -n "$INPUT_REF" ]]; then
+            echo "target_ref=$INPUT_REF" >> "$GITHUB_OUTPUT"
+          elif [[ "$EVENT_NAME" == "repository_dispatch" && -n "$CLIENT_REF" ]]; then
+            echo "target_ref=$CLIENT_REF" >> "$GITHUB_OUTPUT"
           else
-            echo "target_ref=${{ github.head_ref || github.ref_name }}" >> "$GITHUB_OUTPUT"
+            echo "target_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
           ref: ${{ steps.ref.outputs.target_ref }}
@@ -77,7 +82,7 @@ jobs:
           exit 1
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 20
 

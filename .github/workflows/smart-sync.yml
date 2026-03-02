@@ -44,25 +44,30 @@ jobs:
 
       - name: Determine Sync Direction
         id: check
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_ACTION: ${{ github.event.action }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          LABEL_NAME: ${{ github.event.label.name }}
         run: |
           # Check which event triggered this workflow
-          if [ "${{ github.event_name }}" = "issues" ]; then
+          if [ "$EVENT_NAME" = "issues" ]; then
             # Issue event → sync to project board
             echo "direction=issue-to-project" >> $GITHUB_OUTPUT
-            echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+            echo "issue_number=$ISSUE_NUMBER" >> $GITHUB_OUTPUT
 
             # Only sync on status label changes or state changes
-            if [[ "${{ github.event.action }}" == "labeled" && "${{ github.event.label.name }}" == status:* ]] || \
-               [ "${{ github.event.action }}" = "closed" ] || \
-               [ "${{ github.event.action }}" = "reopened" ]; then
+            if [[ "$EVENT_ACTION" == "labeled" && "$LABEL_NAME" == status:* ]] || \
+               [ "$EVENT_ACTION" = "closed" ] || \
+               [ "$EVENT_ACTION" = "reopened" ]; then
               echo "should_sync=true" >> $GITHUB_OUTPUT
-              echo "✅ Will sync: Issue #${{ github.event.issue.number }} → Project Board"
+              echo "✅ Will sync: Issue #$ISSUE_NUMBER → Project Board"
             else
               echo "should_sync=false" >> $GITHUB_OUTPUT
               echo "⏭️ Skipping: Not a status change or state change"
             fi
 
-          elif [ "${{ github.event_name }}" = "projects_v2_item" ]; then
+          elif [ "$EVENT_NAME" = "projects_v2_item" ]; then
             # Project event → sync to issue
             echo "direction=project-to-issue" >> $GITHUB_OUTPUT
             echo "should_sync=true" >> $GITHUB_OUTPUT
@@ -143,12 +148,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 1
 
       - name: Sync Issue to Project Board
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@9d86c9b0c946914e9c71ac5ee1c008959cbfa9af # v1
         env:
           GH_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
         with:
@@ -306,12 +311,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 1
 
       - name: Sync Project Board to Issue
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@9d86c9b0c946914e9c71ac5ee1c008959cbfa9af # v1
         env:
           GH_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
         with:
