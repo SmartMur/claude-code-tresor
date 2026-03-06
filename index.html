@@ -1,0 +1,4331 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="World-class collection of Claude Code utilities — autonomous skills, expert agents, slash commands, and prompts for development workflows.">
+      
+      
+      
+        <link rel="canonical" href="https://smartmur.github.io/claude-code-tresor/">
+      
+      
+      
+        <link rel="next" href="getting-started/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/smartmur-logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Claude Code Tresor</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#claude-code-tresor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Claude Code Tresor" class="md-header__button md-logo" aria-label="Claude Code Tresor" data-md-component="logo">
+      
+  <img src="assets/smartmur-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Claude Code Tresor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SmartMur/claude-code-tresor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SmartMur/claude-code-tresor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="architecture/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="agents/" class="md-tabs__link">
+          
+  
+  
+  Agents
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="commands/" class="md-tabs__link">
+          
+  
+  
+  Commands
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="reference/agents/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="guides/workflow/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="workflows/agent-skill-integration/" class="md-tabs__link">
+          
+  
+  
+  Workflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="releases/changelog/" class="md-tabs__link">
+          
+  
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Claude Code Tresor" class="md-nav__button md-logo" aria-label="Claude Code Tresor" data-md-component="logo">
+      
+  <img src="assets/smartmur-logo.svg" alt="logo">
+
+    </a>
+    Claude Code Tresor
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SmartMur/claude-code-tresor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SmartMur/claude-code-tresor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#also-available-on-smithery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Also available on Smithery:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new-in-v270" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 What's New in v2.7.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎉 What&#39;s New in v2.7.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#previous-v260-quality-excellence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previous: v2.6.0 - Quality Excellence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previous-release-v250-november-15-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previous Release: v2.5.0 (November 15, 2025)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-claude-code-tresor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What is Claude Code Tresor?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 What is Claude Code Tresor?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-choose-claude-code-tresor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 Why Choose Claude Code Tresor?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Deep Dive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Deep Dive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#want-to-understand-the-architecture-behind-this-141-agent-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Want to understand the architecture behind this 141-agent setup?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-included" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ What's Included
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ What&#39;s Included">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slash-commands-19-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Slash Commands (19 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-agents-8-production-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Core Agents (8 Production-Ready)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-subagents-133-specialists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌍 Extended Subagents (133 Specialists)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-8-autonomous-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Skills (8 Autonomous) - NEW!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curated-prompt-templates-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Curated Prompt Templates (20+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 Development Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Real-World Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-achievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏆 Quality Achievements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-projects-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Related Projects &amp; Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Related Projects &amp; Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-code-skill-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏭 Claude Code Skill Factory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-skills-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Claude Skills Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-ecosystem-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Complete Ecosystem Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-these-projects-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 How These Projects Work Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-automated-installation-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Automated Installation (Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-manual-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Manual Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-selective-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Selective Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Project Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Code Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Repository Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Getting Started Paths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Getting Started Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-to-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👶 New to Claude Code?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏃‍♂️ Ready to Build?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 Team Lead?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Power User?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Updates &amp; Maintenance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Updates &amp; Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stay-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stay Current
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Contributing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤝 Contributing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-contributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Contributions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-contributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Contributions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Project Stats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏆 Success Stories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏆 Success Stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Developers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agencies-consultancies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agencies &amp; Consultancies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 License &amp; Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📄 License &amp; Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You Can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🙏 Acknowledgments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 Support &amp; Community
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📞 Support &amp; Community">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Professional Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Star History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/systems-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems Architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/security-auditor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Auditor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/test-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/refactor-expert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Refactor Expert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/performance-tuner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Tuner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/docs-writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs Writer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/config-safety-reviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Safety Reviewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/root-cause-analyzer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Root Cause Analyzer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/technical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/agent-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Library Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/migration-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guides/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="workflows/agent-skill-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent-Skill Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="workflows/git-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="workflows/github-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="workflows/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Releases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="releases/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="releases/v2.7.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2.7.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="releases/v2.6.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2.6.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="releases/v2.5.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2.5.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#also-available-on-smithery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Also available on Smithery:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-new-in-v270" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 What's New in v2.7.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎉 What&#39;s New in v2.7.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#previous-v260-quality-excellence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previous: v2.6.0 - Quality Excellence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previous-release-v250-november-15-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Previous Release: v2.5.0 (November 15, 2025)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-claude-code-tresor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What is Claude Code Tresor?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 What is Claude Code Tresor?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-choose-claude-code-tresor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 Why Choose Claude Code Tresor?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Deep Dive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Deep Dive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#want-to-understand-the-architecture-behind-this-141-agent-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Want to understand the architecture behind this 141-agent setup?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-included" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ What's Included
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ What&#39;s Included">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slash-commands-19-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Slash Commands (19 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-agents-8-production-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Core Agents (8 Production-Ready)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-subagents-133-specialists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌍 Extended Subagents (133 Specialists)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-8-autonomous-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ Skills (8 Autonomous) - NEW!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curated-prompt-templates-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Curated Prompt Templates (20+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📏 Development Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Real-World Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-achievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏆 Quality Achievements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-projects-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Related Projects &amp; Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Related Projects &amp; Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claude-code-skill-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏭 Claude Code Skill Factory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-skills-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Claude Skills Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-ecosystem-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Complete Ecosystem Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-these-projects-work-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 How These Projects Work Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-automated-installation-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Automated Installation (Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-manual-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Manual Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-selective-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Selective Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Project Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Code Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Repository Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Getting Started Paths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Getting Started Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-to-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👶 New to Claude Code?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏃‍♂️ Ready to Build?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 Team Lead?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Power User?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Updates &amp; Maintenance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Updates &amp; Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stay-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stay Current
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Contributing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤝 Contributing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-contributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Contributions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-contributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Contributions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Project Stats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏆 Success Stories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏆 Success Stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Developers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agencies-consultancies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agencies &amp; Consultancies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 License &amp; Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📄 License &amp; Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You Can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🙏 Acknowledgments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 Support &amp; Community
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📞 Support &amp; Community">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Professional Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Star History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="claude-code-tresor">Claude Code Tresor 🏆<a class="headerlink" href="#claude-code-tresor" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>A world-class collection of Claude Code utilities: autonomous skills, expert agents, slash commands, and prompts that supercharge your development workflow.</p>
+</blockquote>
+<p><a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
+<a href="https://github.com/alirezarezvani/claude-code-tresor"><img alt="Version" src="https://img.shields.io/badge/version-2.7.0-blue.svg" /></a>
+<a href="docs/VALIDATION-REPORT-CONTENT.md"><img alt="Quality" src="https://img.shields.io/badge/quality-9.7%2F10-brightgreen.svg" /></a>
+<a href="https://claude.ai/code"><img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-Compatible-blue.svg" /></a>
+<a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" /></a></p>
+<h2 id="also-available-on-smithery">Also available on Smithery:<a class="headerlink" href="#also-available-on-smithery" title="Permanent link">&para;</a></h2>
+<p><a href="https://smithery.ai/skills?ns=alirezarezvani&amp;utm_source=github&amp;utm_medium=badge"><img alt="Run in Smithery" src="https://smithery.ai/badge/skills/alirezarezvani" /></a></p>
+<p><strong>Author</strong>: Alireza Rezvani
+<strong>Created</strong>: September 16, 2025
+<strong>Updated</strong>: December 17, 2025 (v2.7.0 - Tresor Workflow Framework)
+<strong>Quality</strong>: 9.7/10 (Exceptional)
+<strong>License</strong>: MIT
+<strong>Repository</strong>: https://github.com/alirezarezvani/claude-code-tresor</p>
+<hr />
+<h2 id="whats-new-in-v270">🎉 What's New in v2.7.0<a class="headerlink" href="#whats-new-in-v270" title="Permanent link">&para;</a></h2>
+<p><strong>Major Release</strong> - 10 New Orchestration Commands + Tresor Workflow Framework!</p>
+<ul>
+<li>🚀 <strong>10 Orchestration Commands</strong> - Production-grade intelligent orchestration (12,682 lines of code)</li>
+<li>🔒 <strong>Security</strong>: <code>/audit</code>, <code>/vulnerability-scan</code>, <code>/compliance-check</code></li>
+<li>⚡ <strong>Performance</strong>: <code>/profile</code>, <code>/benchmark</code></li>
+<li>🔧 <strong>Operations</strong>: <code>/deploy-validate</code>, <code>/health-check</code>, <code>/incident-response</code></li>
+<li>📊 <strong>Quality</strong>: <code>/code-health</code>, <code>/debt-analysis</code></li>
+<li>🤖 <strong>Intelligent Agent Selection</strong> - Auto-selects from 141 agents based on tech stack</li>
+<li>🔄 <strong>Multi-Phase Orchestration</strong> - 3-4 phases with parallel &amp; sequential execution</li>
+<li>🛡️ <strong>Dependency Verification</strong> - Ensures safe parallel agent execution</li>
+<li>🔄 <strong>Tresor Workflow Framework</strong> - Meta-prompting, todo management, context handoff</li>
+<li>📦 <strong>Consolidated Structure</strong> - Unified agent directory in <code>/subagents/</code> (133 total agents)</li>
+</ul>
+<hr />
+<h3 id="previous-v260-quality-excellence">Previous: v2.6.0 - Quality Excellence<a class="headerlink" href="#previous-v260-quality-excellence" title="Permanent link">&para;</a></h3>
+<p><strong>Quality Excellence Release</strong> - Achieved 9.7/10 exceptional quality rating!</p>
+<ul>
+<li>🎨 <strong>Design Category Transformation</strong> - Improved from 4.0 to 8.0/10 (+100% quality boost)</li>
+<li>📚 <strong>12 Enhanced Examples</strong> - Added comprehensive usage examples to key agents</li>
+<li>📋 <strong>Improved Consistency</strong> - Standard sections added to 9 specialized agents</li>
+<li>✅ <strong>Best Practices</strong> - Added to config-safety-reviewer and security-auditor</li>
+<li>🤝 <strong>Collaboration Guide</strong> - Cross-team workflow documentation created</li>
+<li>📖 <strong>Streamlined Docs</strong> - Consolidated 21 files into 3 guides + archive</li>
+</ul>
+<p><strong>Backward Compatible</strong> - No breaking changes from v2.5.0</p>
+<h3 id="previous-release-v250-november-15-2025">Previous Release: v2.5.0 (November 15, 2025)<a class="headerlink" href="#previous-release-v250-november-15-2025" title="Permanent link">&para;</a></h3>
+<p><strong>Agent Reorganization &amp; Extension</strong> - 141 agents organized by team and function!</p>
+<ul>
+<li>🏗️ <strong>New Structure</strong> - <code>subagents/</code> directory with 10 color-coded team categories</li>
+<li>📦 <strong>141 Total Agents</strong> - 8 core + 133 subagents across all development domains</li>
+<li>🔄 <strong>Core Agent Renaming</strong> - systems-architect, config-safety-reviewer, root-cause-analyzer</li>
+<li>🎨 <strong>Color Coding System</strong> - Visual team identification (10 team colors)</li>
+<li>📚 <strong>Comprehensive Documentation</strong> - 450KB of guides, catalogs, and references</li>
+</ul>
+<p><strong>BREAKING CHANGES</strong> (v2.5.0 only):
+- <code>@architect</code> → <code>@systems-architect</code>
+- <code>@code-reviewer</code> → <code>@config-safety-reviewer</code>
+- <code>@debugger</code> → <code>@root-cause-analyzer</code></p>
+<hr />
+<h2 id="what-is-claude-code-tresor">🎯 What is Claude Code Tresor?<a class="headerlink" href="#what-is-claude-code-tresor" title="Permanent link">&para;</a></h2>
+<p>Claude Code Tresor is the ultimate collection of <strong>professional-grade utilities</strong> for Claude Code users. Whether you're a solo developer or part of a team, this repository provides battle-tested tools that integrate seamlessly into your development workflow.</p>
+<h3 id="why-choose-claude-code-tresor">🌟 Why Choose Claude Code Tresor?<a class="headerlink" href="#why-choose-claude-code-tresor" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>🚀 Production-Ready</strong>: All utilities are tested and used in real-world projects</li>
+<li><strong>📚 Comprehensive</strong>: Covers the entire development lifecycle</li>
+<li><strong>🛠️ Easy Installation</strong>: One-command setup with automated updates</li>
+<li><strong>🎨 Customizable</strong>: Adapt templates to your specific needs and tech stack</li>
+<li><strong>👥 Team-Friendly</strong>: Includes collaboration guidelines and standards</li>
+<li><strong>📖 Well-Documented</strong>: Every component includes detailed examples and usage guides</li>
+</ul>
+<blockquote>
+<p><strong>💡 Ecosystem Tip:</strong> Looking for more? Check out the <a href="https://github.com/alirezarezvani/claude-code-skill-factory">Claude Code Skill Factory</a> to build custom skills, or browse the <a href="https://github.com/alirezarezvani/claude-skills">Claude Skills Library</a> for pre-built professional domain packages. See <a href="#-related-projects--ecosystem">Related Projects</a> for details.</p>
+<p><strong>📖 <a href="https://gist.github.com/alirezarezvani/a0f6e0a984d4a4adc4842bbe124c5935">Complete Augmentation Guide</a></strong> - Comprehensive guide with FAQs, use cases, and installation instructions</p>
+<h2 id="deep-dive">📚 Deep Dive<a class="headerlink" href="#deep-dive" title="Permanent link">&para;</a></h2>
+</blockquote>
+<h3 id="want-to-understand-the-architecture-behind-this-141-agent-setup">Want to understand the architecture behind this 141-agent setup?<a class="headerlink" href="#want-to-understand-the-architecture-behind-this-141-agent-setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://medium.com/@alirezarezvani/141-claude-code-agents-the-setup-that-actually-works-a-complete-guide-98c2c79bf867?sk=73d5be97f9bd81a18edbcc0394e44b95">141 Claude Code Agents: The Setup That Actually Works</a></li>
+</ul>
+<hr />
+<h2 id="whats-included">✨ What's Included<a class="headerlink" href="#whats-included" title="Permanent link">&para;</a></h2>
+<h3 id="slash-commands-19-total">🚀 Slash Commands (19 Total)<a class="headerlink" href="#slash-commands-19-total" title="Permanent link">&para;</a></h3>
+<p><strong>Development Commands</strong> (4):</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/scaffold</code></strong></td>
+<td>Generate project structures, components, and boilerplate</td>
+<td><code>/scaffold react-component UserProfile --hooks --tests</code></td>
+</tr>
+<tr>
+<td><strong><code>/review</code></strong></td>
+<td>Automated code review with security and performance analysis</td>
+<td><code>/review --scope staged --checks security,performance</code></td>
+</tr>
+<tr>
+<td><strong><code>/test-gen</code></strong></td>
+<td>Create comprehensive test suites automatically</td>
+<td><code>/test-gen --file utils.js --coverage 90</code></td>
+</tr>
+<tr>
+<td><strong><code>/docs-gen</code></strong></td>
+<td>Generate documentation from code and comments</td>
+<td><code>/docs-gen api --format openapi</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tresor Workflow Commands</strong> (5):</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/prompt-create</code></strong></td>
+<td>Generate optimized prompts for complex tasks</td>
+<td><code>/prompt-create Build user authentication system</code></td>
+</tr>
+<tr>
+<td><strong><code>/prompt-run</code></strong></td>
+<td>Execute generated prompts in sub-agents</td>
+<td><code>/prompt-run 001 --parallel</code></td>
+</tr>
+<tr>
+<td><strong><code>/todo-add</code></strong></td>
+<td>Capture ideas mid-conversation</td>
+<td><code>/todo-add Fix performance issue in API</code></td>
+</tr>
+<tr>
+<td><strong><code>/todo-check</code></strong></td>
+<td>Review and work on captured todos</td>
+<td><code>/todo-check</code></td>
+</tr>
+<tr>
+<td><strong><code>/handoff-create</code></strong></td>
+<td>Generate context handoff document</td>
+<td><code>/handoff-create</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Orchestration Commands</strong> (10) - <strong>NEW in v2.7.0!</strong></p>
+<details>
+<summary><b>🔒 Security Commands (3)</b></summary>
+
+| Command | Purpose | Duration | Key Features |
+|---------|---------|----------|--------------|
+| **`/audit`** | Comprehensive security audit | 2-4 hours | OWASP Top 10, pentesting, infrastructure review, RCA |
+| **`/vulnerability-scan`** | CVE & dependency scanning | 30-60 min | NVD correlation, SAST, exploit detection, auto-fix |
+| **`/compliance-check`** | Regulatory compliance validation | 1-2 hours | GDPR, SOC2, HIPAA, PCI-DSS, ISO 27001, CCPA |
+
+</details>
+
+<details>
+<summary><b>⚡ Performance Commands (2)</b></summary>
+
+| Command | Purpose | Duration | Key Features |
+|---------|---------|----------|--------------|
+| **`/profile`** | Performance profiling | 15min-2h | Bottleneck analysis, Core Web Vitals, query optimization |
+| **`/benchmark`** | Load testing | 5-30 min | Scenario generation, stress testing, capacity planning |
+
+</details>
+
+<details>
+<summary><b>🔧 Operations Commands (3)</b></summary>
+
+| Command | Purpose | Duration | Key Features |
+|---------|---------|----------|--------------|
+| **`/deploy-validate`** | Pre-deployment validation | 10-20 min | Test suite, config safety, go/no-go decision |
+| **`/health-check`** | System health verification | 5-15 min | Multi-layer checks, anomaly detection, alerting |
+| **`/incident-response`** | Production incident coordination | 30min-2h | Emergency triage, RCA, blameless postmortem |
+
+</details>
+
+<details>
+<summary><b>📊 Quality Commands (2)</b></summary>
+
+| Command | Purpose | Duration | Key Features |
+|---------|---------|----------|--------------|
+| **`/code-health`** | Codebase quality assessment | 20-40 min | Quality metrics, test coverage, maintainability scoring |
+| **`/debt-analysis`** | Technical debt identification | 30-60 min | Debt quantification, ROI prioritization, refactoring roadmap |
+
+</details>
+
+<h3 id="core-agents-8-production-ready">🤖 Core Agents (8 Production-Ready)<a class="headerlink" href="#core-agents-8-production-ready" title="Permanent link">&para;</a></h3>
+<p>Expert-level assistance for complex development tasks:</p>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Expertise</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>@config-safety-reviewer</code></strong></td>
+<td>Configuration safety, production reliability</td>
+<td>Pool sizes, timeouts, connection limits, magic numbers</td>
+</tr>
+<tr>
+<td><strong><code>@test-engineer</code></strong></td>
+<td>Testing strategies, test creation, QA</td>
+<td>Unit tests, integration tests, coverage analysis</td>
+</tr>
+<tr>
+<td><strong><code>@docs-writer</code></strong></td>
+<td>Technical documentation, user guides</td>
+<td>API docs, README files, troubleshooting guides</td>
+</tr>
+<tr>
+<td><strong><code>@systems-architect</code></strong></td>
+<td>System design, technology evaluation</td>
+<td>Architecture reviews, design decisions, scalability</td>
+</tr>
+<tr>
+<td><strong><code>@root-cause-analyzer</code></strong></td>
+<td>Comprehensive RCA, systematic debugging</td>
+<td>Production incidents, complex bugs, performance issues</td>
+</tr>
+<tr>
+<td><strong><code>@security-auditor</code></strong></td>
+<td>Security assessment, OWASP compliance</td>
+<td>Security audits, vulnerability analysis, compliance</td>
+</tr>
+<tr>
+<td><strong><code>@performance-tuner</code></strong></td>
+<td>Performance optimization, profiling</td>
+<td>Performance issues, bottleneck analysis, optimization</td>
+</tr>
+<tr>
+<td><strong><code>@refactor-expert</code></strong></td>
+<td>Code refactoring, clean architecture</td>
+<td>Technical debt, code modernization, SOLID principles</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-subagents-133-specialists">🌍 Extended Subagents (133 Specialists)<a class="headerlink" href="#extended-subagents-133-specialists" title="Permanent link">&para;</a></h3>
+<p><strong>Total: 141 agents</strong> (8 core + 133 subagents) organized in <code>subagents/</code> directory</p>
+<p>Organized by team and function across 10 color-coded categories:</p>
+<ul>
+<li><strong>🔵 Engineering</strong> (54) - Backend, frontend, mobile, DevOps, security, testing, 16 languages</li>
+<li><strong>🏆 Leadership</strong> (14) - Finance, strategy, risk, compliance</li>
+<li><strong>🌱 Marketing</strong> (11) - Content, social media, growth, SEO</li>
+<li><strong>💜 Product</strong> (9) - Product management, requirements, research, analytics</li>
+<li><strong>🧠 AI/Automation</strong> (9) - AI/ML engineering, automation, prompt engineering</li>
+<li><strong>💙 Account/CS</strong> (8) - Account management, customer success, sales, support</li>
+<li><strong>🎨 Design</strong> (7) - UI/UX design, visual design, branding (9.7/10 quality ⭐)</li>
+<li><strong>🔶 Research</strong> (7) - Market research, competitive intelligence, data research</li>
+<li><strong>🌊 Operations</strong> (6) - Analytics, infrastructure, support</li>
+</ul>
+<p><strong>Quality</strong>: 9.7/10 (Exceptional - validated across all agents)</p>
+<p><strong>See:</strong> <a href="subagents/README.md">Complete Agent Catalog</a> | <a href="subagents/AGENT-INDEX.md">Agent Index</a> | <a href="docs/TECHNICAL-REFERENCE.md">Technical Reference</a></p>
+<h3 id="skills-8-autonomous-new">✨ Skills (8 Autonomous) - <strong>NEW!</strong><a class="headerlink" href="#skills-8-autonomous-new" title="Permanent link">&para;</a></h3>
+<p>Automatic background helpers that work while you code:</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>What It Does</th>
+<th>Triggers On</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>code-reviewer</code></strong></td>
+<td>Real-time code quality checks</td>
+<td>File edits, saves</td>
+</tr>
+<tr>
+<td><strong><code>test-generator</code></strong></td>
+<td>Suggests missing tests automatically</td>
+<td>New functions, untested code</td>
+</tr>
+<tr>
+<td><strong><code>git-commit-helper</code></strong></td>
+<td>Generates commit messages from diff</td>
+<td><code>git diff --staged</code></td>
+</tr>
+<tr>
+<td><strong><code>security-auditor</code></strong></td>
+<td>Detects vulnerabilities (SQL injection, XSS)</td>
+<td>Auth code, API endpoints</td>
+</tr>
+<tr>
+<td><strong><code>secret-scanner</code></strong></td>
+<td>Blocks commits with exposed secrets</td>
+<td>Pre-commit, API keys in code</td>
+</tr>
+<tr>
+<td><strong><code>dependency-auditor</code></strong></td>
+<td>Checks dependencies for CVEs</td>
+<td>package.json changes</td>
+</tr>
+<tr>
+<td><strong><code>api-documenter</code></strong></td>
+<td>Auto-generates OpenAPI specs</td>
+<td>API routes added</td>
+</tr>
+<tr>
+<td><strong><code>readme-updater</code></strong></td>
+<td>Keeps README current</td>
+<td>Project changes, features</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Skills vs Agents:</strong> Skills work <strong>automatically</strong> in the background. Agents require <strong>manual invocation</strong> (<code>@agent</code>) for deep analysis.</p>
+<p><strong>Learn more:</strong> <a href="skills/README.md">Skills Guide</a> · <a href="GETTING-STARTED.md">Getting Started</a> · <a href="ARCHITECTURE.md">Architecture</a></p>
+<h3 id="curated-prompt-templates-20">📝 Curated Prompt Templates (20+)<a class="headerlink" href="#curated-prompt-templates-20" title="Permanent link">&para;</a></h3>
+<p>Ready-to-use prompts for common development scenarios:</p>
+<ul>
+<li><strong>Frontend Development</strong>: React, Vue, Angular, JavaScript/TypeScript</li>
+<li><strong>Backend Development</strong>: APIs, databases, authentication, microservices</li>
+<li><strong>Debugging &amp; Analysis</strong>: Error analysis, performance troubleshooting</li>
+<li><strong>Best Practices</strong>: Clean code, security, refactoring strategies</li>
+</ul>
+<h3 id="development-standards">📏 Development Standards<a class="headerlink" href="#development-standards" title="Permanent link">&para;</a></h3>
+<p>Professional coding standards and style guides:</p>
+<ul>
+<li><strong>JavaScript/TypeScript</strong> style guide with ESLint/Prettier configs</li>
+<li><strong>Git workflows</strong> with conventional commits</li>
+<li><strong>Code review</strong> checklists and PR templates</li>
+<li><strong>Team collaboration</strong> guidelines</li>
+</ul>
+<h3 id="real-world-examples">💡 Real-World Examples<a class="headerlink" href="#real-world-examples" title="Permanent link">&para;</a></h3>
+<p>Complete workflow demonstrations:</p>
+<ul>
+<li><strong>React App Setup</strong>: Full modern React application from scratch</li>
+<li><strong>API Development</strong>: RESTful APIs with testing and documentation</li>
+<li><strong>Performance Optimization</strong>: Systematic performance improvement</li>
+<li><strong>CI/CD Pipelines</strong>: Automated testing and deployment</li>
+</ul>
+<h3 id="quality-achievements">🏆 Quality Achievements<a class="headerlink" href="#quality-achievements" title="Permanent link">&para;</a></h3>
+<p><strong>v2.6.0 Quality Metrics</strong>:
+- <strong>Overall Quality</strong>: 9.7/10 (Exceptional - up from 7.1/10 in v2.5.0)
+- <strong>YAML Validation</strong>: 100% (all 141 agents valid)
+- <strong>Content Quality</strong>: 9.7/10 (comprehensive examples and best practices)
+- <strong>Organization</strong>: 100% (perfect categorization and structure)
+- <strong>Cross-References</strong>: 100% (all integrations validated)</p>
+<p><strong>Validation</strong>: All agents tested across 4 validation tiers - YAML, Content, Organization, Cross-References</p>
+<hr />
+<h2 id="related-projects-ecosystem">🔗 Related Projects &amp; Ecosystem<a class="headerlink" href="#related-projects-ecosystem" title="Permanent link">&para;</a></h2>
+<p>Looking to extend your Claude Code capabilities further? Check out these companion repositories:</p>
+<h3 id="claude-code-skill-factory">🏭 <a href="https://github.com/alirezarezvani/claude-code-skill-factory">Claude Code Skill Factory</a><a class="headerlink" href="#claude-code-skill-factory" title="Permanent link">&para;</a></h3>
+<p><strong>Build your own custom Skills and Agents at scale</strong></p>
+<p>A comprehensive toolkit for generating production-ready Claude Skills and Agents without starting from scratch. Perfect when you need specialized capabilities beyond what's available in pre-built collections.</p>
+<p><strong>Key Features:</strong>
+- <strong>Skills Factory</strong>: Generate multi-file skill packages with Python code, documentation, and examples
+- <strong>Agents Factory</strong>: Create single-file specialist agents with enhanced YAML configuration
+- <strong>Smart Architecture</strong>: Automatically determines when functional code is needed vs. prompt-only approaches
+- <strong>7 Reference Examples</strong>: Financial analysis, AWS architecture, content research, Microsoft 365, and more
+- <strong>Enterprise Standards</strong>: Type-annotated code, error handling, and composable design</p>
+<p><strong>Best For:</strong> Developers who need custom domain-specific capabilities, teams building proprietary workflows, or organizations requiring specialized AI tools tailored to their tech stack.</p>
+<p><strong>Use Case:</strong> "I need a skill that analyzes our company's specific Terraform patterns" → Use Skill Factory to generate it</p>
+<h3 id="claude-skills-library">📚 <a href="https://github.com/alirezarezvani/claude-skills">Claude Skills Library</a><a class="headerlink" href="#claude-skills-library" title="Permanent link">&para;</a></h3>
+<p><strong>Production-ready skill packages for professional domains</strong></p>
+<p>A curated collection of specialized skill packages combining best practices, analysis tools, and strategic frameworks for various professional roles. Deploy expert-level capabilities immediately.</p>
+<p><strong>Available Collections:</strong>
+- <strong>Marketing</strong> (3 packages): Content strategy, demand generation, product marketing
+- <strong>C-Level Advisory</strong> (2 packages): CEO and CTO strategic guidance
+- <strong>Product Team</strong> (6 packages): Product management, UX research, design systems, agile delivery
+- <strong>Project Management</strong> (6 packages): Jira, Confluence, Scrum, PMO, Atlassian integration
+- <strong>Engineering</strong> (9 packages): Architecture, fullstack, QA, DevOps, security, code review
+- <strong>AI/ML/Data</strong> (Coming soon): Data science and machine learning workflows</p>
+<p><strong>Key Benefits:</strong>
+- <strong>40%+ time savings</strong> through domain-specific guidance
+- <strong>30%+ quality improvements</strong> with built-in best practices
+- <strong>Python CLI utilities</strong> for automated analysis and reporting
+- <strong>Ready-to-use templates</strong> for immediate deployment</p>
+<p><strong>Best For:</strong> Teams needing enterprise-grade expertise packages, professionals seeking domain-specific guidance, or organizations standardizing workflows across multiple roles.</p>
+<p><strong>Use Case:</strong> "I need comprehensive product management workflows with templates and frameworks" → Use Claude Skills Library</p>
+<hr />
+<h3 id="complete-ecosystem-guide">📖 Complete Ecosystem Guide<a class="headerlink" href="#complete-ecosystem-guide" title="Permanent link">&para;</a></h3>
+<p><strong>New to Claude Code augmentation?</strong> Read the comprehensive guide with FAQs, installation instructions, and detailed use cases:</p>
+<p><strong><a href="https://gist.github.com/alirezarezvani/a0f6e0a984d4a4adc4842bbe124c5935">📖 Complete Augmentation Guide</a></strong> (GitHub Gist)</p>
+<p>This guide answers:
+- What is Claude Code augmentation and why should I use it?
+- How do Skills, Agents, Commands, and Hooks work?
+- Which repository should I use for my needs?
+- Step-by-step installation for all three repositories
+- 20+ FAQs covering installation, usage, and troubleshooting
+- 5+ detailed use cases with code examples</p>
+<hr />
+<h3 id="how-these-projects-work-together">🎯 How These Projects Work Together<a class="headerlink" href="#how-these-projects-work-together" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Your Need</th>
+<th>Use This Repository</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ready-to-use utilities</strong> (scaffolding, code review, testing, docs)</td>
+<td><strong>Claude Code Tresor</strong> (this repo)</td>
+</tr>
+<tr>
+<td><strong>Build custom skills</strong> for your specific domain/tech stack</td>
+<td><a href="https://github.com/alirezarezvani/claude-code-skill-factory"><strong>Skill Factory</strong></a></td>
+</tr>
+<tr>
+<td><strong>Deploy pre-built expertise</strong> for professional roles</td>
+<td><a href="https://github.com/alirezarezvani/claude-skills"><strong>Skills Library</strong></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Complete Workflow Example:</strong>
+1. <strong>Start here</strong> (Claude Code Tresor) → Install 8 skills + 8 agents + 4 commands for development workflows
+2. <strong>Browse Skills Library</strong> → Add marketing, product, or engineering domain expertise packages
+3. <strong>Build custom with Skill Factory</strong> → Generate proprietary skills for your company's unique needs</p>
+<p>All three repositories are <strong>MIT licensed</strong> and maintained by Alireza Rezvani.</p>
+<hr />
+<h2 id="documentation">📚 Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p><strong><a href="documentation/README.md">Complete Documentation →</a></strong></p>
+<h3 id="quick-links">Quick Links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><a href="documentation/guides/installation.md">Installation Guide →</a></strong> - Install in 5 minutes</li>
+<li><strong><a href="documentation/guides/getting-started.md">Getting Started →</a></strong> - Your first workflow</li>
+<li><strong><a href="documentation/reference/faq.md">FAQ →</a></strong> - Common questions answered</li>
+<li><strong><a href="documentation/guides/troubleshooting.md">Troubleshooting →</a></strong> - Fix issues</li>
+</ul>
+<h3 id="full-documentation">Full Documentation<a class="headerlink" href="#full-documentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><a href="documentation/guides/">User Guides →</a></strong> - Installation, configuration, troubleshooting, migration, contributing</li>
+<li><strong><a href="documentation/reference/">Technical Reference →</a></strong> - Complete skills, agents, and commands documentation</li>
+<li><strong><a href="documentation/workflows/">Workflows →</a></strong> - Git workflow, GitHub automation, agent-skill integration</li>
+</ul>
+<hr />
+<h2 id="quick-start">🚀 Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<h3 id="option-1-automated-installation-recommended">Option 1: Automated Installation (Recommended)<a class="headerlink" href="#option-1-automated-installation-recommended" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Clone the repository</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/alirezarezvani/claude-code-tresor.git
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>claude-code-tresor
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Run the installation script (installs skills + agents + commands)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>chmod<span class="w"> </span>+x<span class="w"> </span>scripts/install.sh
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>./scripts/install.sh
+</span></code></pre></div>
+<p><strong>What's installed:</strong>
+- ✅ <strong>8 Skills</strong> - Automatic background helpers
+- ✅ <strong>8 Agents</strong> - Manual expert sub-agents
+- ✅ <strong>4 Commands</strong> - Workflow automation</p>
+<p><strong>First time?</strong> See <a href="GETTING-STARTED.md">GETTING-STARTED.md</a> for 5-minute quick start.</p>
+<h3 id="option-2-manual-installation">Option 2: Manual Installation<a class="headerlink" href="#option-2-manual-installation" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Copy skills to Claude Code directory</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cp<span class="w"> </span>-r<span class="w"> </span>skills/*<span class="w"> </span>~/.claude/skills/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Copy commands to Claude Code directory</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>cp<span class="w"> </span>-r<span class="w"> </span>commands/*<span class="w"> </span>~/.claude/commands/
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Copy agents to Claude Code directory</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>cp<span class="w"> </span>-r<span class="w"> </span>agents/*<span class="w"> </span>~/.claude/agents/
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Copy resources for reference</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>cp<span class="w"> </span>-r<span class="w"> </span>prompts<span class="w"> </span>standards<span class="w"> </span>examples<span class="w"> </span>~/claude-code-resources/
+</span></code></pre></div>
+<h3 id="option-3-selective-installation">Option 3: Selective Installation<a class="headerlink" href="#option-3-selective-installation" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Install only autonomous skills (v2.0+)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./scripts/install.sh<span class="w"> </span>--skills-only
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Install only slash commands</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>./scripts/install.sh<span class="w"> </span>--commands-only
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Install only agents</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>./scripts/install.sh<span class="w"> </span>--agents-only
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Install only resources (prompts, standards, examples)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>./scripts/install.sh<span class="w"> </span>--resources-only
+</span></code></pre></div>
+<hr />
+<h2 id="usage-examples">🛠️ Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="project-setup">🏗️ Project Setup<a class="headerlink" href="#project-setup" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Create a complete React application</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/scaffold<span class="w"> </span>react-app<span class="w"> </span>my-project<span class="w"> </span>--typescript<span class="w"> </span>--tailwind<span class="w"> </span>--tests
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Generate API endpoints with tests</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>/scaffold<span class="w"> </span>express-api<span class="w"> </span>user-service<span class="w"> </span>--auth<span class="w"> </span>--database<span class="w"> </span>--tests
+</span></code></pre></div>
+<h3 id="code-review">🔍 Code Review<a class="headerlink" href="#code-review" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Configuration safety review</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>@config-safety-reviewer<span class="w"> </span>Review<span class="w"> </span>database<span class="w"> </span>connection<span class="w"> </span>pool<span class="w"> </span>settings<span class="w"> </span><span class="k">for</span>:
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>-<span class="w"> </span>Pool<span class="w"> </span>size<span class="w"> </span>limits
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>-<span class="w"> </span>Timeout<span class="w"> </span>configurations
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>-<span class="w"> </span>Connection<span class="w"> </span>limit<span class="w"> </span>safety
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>-<span class="w"> </span>Magic<span class="w"> </span>numbers
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># Security audit</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>@security-auditor<span class="w"> </span>Please<span class="w"> </span>review<span class="w"> </span>this<span class="w"> </span>component<span class="w"> </span><span class="k">for</span>:
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>-<span class="w"> </span>OWASP<span class="w"> </span>Top<span class="w"> </span><span class="m">10</span><span class="w"> </span>vulnerabilities
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>-<span class="w"> </span>Authentication/authorization
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>-<span class="w"> </span>Input<span class="w"> </span>validation
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c1"># Automated PR review</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>/review<span class="w"> </span>--scope<span class="w"> </span>pr<span class="w"> </span>--checks<span class="w"> </span>security,performance,configuration
+</span></code></pre></div>
+<h3 id="testing">🧪 Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Generate comprehensive tests</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>@test-engineer<span class="w"> </span>Create<span class="w"> </span>unit<span class="w"> </span>tests<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>utility<span class="w"> </span><span class="k">function</span><span class="w"> </span>with:
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>-<span class="w"> </span>Edge<span class="w"> </span><span class="k">case</span><span class="w"> </span>coverage
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>-<span class="w"> </span>Error<span class="w"> </span>handling<span class="w"> </span>tests
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>-<span class="w"> </span>Performance<span class="w"> </span>benchmarks
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Automated test generation</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>/test-gen<span class="w"> </span>--file<span class="w"> </span>components/UserCard.tsx<span class="w"> </span>--framework<span class="w"> </span>jest
+</span></code></pre></div>
+<h3 id="documentation_1">📖 Documentation<a class="headerlink" href="#documentation_1" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Generate API documentation</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>/docs-gen<span class="w"> </span>api<span class="w"> </span>--format<span class="w"> </span>openapi<span class="w"> </span>--include-examples
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Create user guides</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>@docs-writer<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>user<span class="w"> </span>guide<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>authentication<span class="w"> </span>system<span class="w"> </span>with:
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>-<span class="w"> </span>Setup<span class="w"> </span>instructions
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>-<span class="w"> </span>Usage<span class="w"> </span>examples
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>-<span class="w"> </span>Troubleshooting<span class="w"> </span>guide
+</span></code></pre></div>
+<hr />
+<h2 id="repository-structure">📁 Repository Structure<a class="headerlink" href="#repository-structure" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>claude-code-tresor/
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>├── 📖 README.md                    # This file - complete overview
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>├── ⚖️ LICENSE                      # MIT License
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>├── 🤝 CONTRIBUTING.md              # Contribution guidelines
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>├── 📚 GETTING-STARTED.md           # 5-minute quick start guide
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>├── 🏗️ ARCHITECTURE.md              # 3-tier system explanation
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>├── 🔄 MIGRATION-GUIDE.md           # Upgrade guide for existing users
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>├──
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>├── ✨ skills/                      # 8 Autonomous Skills (NEW v2.0!)
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>│   ├── development/                # code-reviewer, test-generator, git-commit-helper
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>│   ├── security/                   # security-auditor, secret-scanner, dependency-auditor
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>│   ├── documentation/              # api-documenter, readme-updater
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>│   ├── README.md                   # Skills guide
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>│   └── TEMPLATES.md                # Custom skill templates
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>├──
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>├── 🤖 agents/                      # 8 Specialized Agents
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>│   ├── code-reviewer/              # Code quality expert
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>│   ├── test-engineer/              # Testing specialist
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>│   ├── docs-writer/                # Documentation expert
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>│   ├── architect/                  # System design expert
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>│   ├── debugger/                   # Debugging specialist
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>│   ├── security-auditor/           # Security expert
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>│   ├── performance-tuner/          # Performance optimization
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>│   └── refactor-expert/            # Code refactoring
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>├──
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>├── ⚡ commands/                     # 4 Slash Commands
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>│   ├── development/                # Project scaffolding and tools
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>│   ├── testing/                    # Test generation and analysis
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>│   ├── documentation/              # Doc generation utilities
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>│   └── workflow/                   # PR reviews and automation
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>├──
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>├── 📝 prompts/                     # Prompt Templates
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>│   ├── code-generation/            # Frontend &amp; backend prompts
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>│   ├── debugging/                  # Error analysis prompts
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>│   ├── architecture/               # System design prompts
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>│   └── best-practices/             # Code quality prompts
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>├──
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>├── 📏 standards/                   # Development Standards
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>│   ├── style-guides/               # Language-specific guides
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>│   ├── git-workflows/              # Git best practices
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>│   └── templates/                  # PR and issue templates
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>├──
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>├── 💡 examples/                    # Real-World Examples
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>│   ├── workflows/                  # Complete project workflows
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>│   ├── integrations/               # Service integration examples
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>│   └── case-studies/               # Detailed project case studies
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>├──
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>├── 📦 sources/                     # Extended Source Library
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>│   ├── agents/                     # 200+ additional agents
+</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>│   └── slash-commands/             # Advanced command utilities
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>├──
+</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>└── 🔧 scripts/                     # Utility Scripts
+</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a>    ├── install.sh                  # Easy installation
+</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a>    └── update.sh                   # Update utilities
+</span></code></pre></div>
+<hr />
+<h2 id="getting-started-paths">🎯 Getting Started Paths<a class="headerlink" href="#getting-started-paths" title="Permanent link">&para;</a></h2>
+<h3 id="new-to-claude-code">👶 New to Claude Code?<a class="headerlink" href="#new-to-claude-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Install</strong>: Run <code>./scripts/install.sh</code> (installs skills + agents + commands)</li>
+<li><strong>Observe</strong>: Skills work automatically - start coding and watch them detect issues</li>
+<li><strong>Try Command</strong>: <code>/scaffold react-component TestComponent --tests</code></li>
+<li><strong>Invoke Agent</strong>: <code>@config-safety-reviewer</code> for configuration safety, <code>@security-auditor</code> for security analysis</li>
+<li><strong>Learn</strong>: Browse <a href="GETTING-STARTED.md">GETTING-STARTED.md</a> for 5-min quick start</li>
+</ol>
+<h3 id="ready-to-build">🏃‍♂️ Ready to Build?<a class="headerlink" href="#ready-to-build" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Skills monitor</strong>: Automatic background checks (code quality, security, tests)</li>
+<li><strong>Agent analysis</strong>: <code>@config-safety-reviewer</code>, <code>@security-auditor</code>, <code>@test-engineer</code> for deep dives</li>
+<li><strong>Command workflows</strong>: <code>/review --scope staged</code>, <code>/test-gen --file utils.js</code></li>
+<li><strong>Full workflow</strong>: Skills detect → Agents analyze → Commands orchestrate</li>
+</ol>
+<h3 id="team-lead">👥 Team Lead?<a class="headerlink" href="#team-lead" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Standards</strong>: Implement <code>standards/style-guides/javascript.md</code></li>
+<li><strong>Workflows</strong>: Set up <code>standards/git-workflows/conventional-commits.md</code></li>
+<li><strong>Templates</strong>: Use <code>standards/templates/</code> for consistency</li>
+<li><strong>Training</strong>: Share <code>examples/</code> with your team</li>
+</ol>
+<h3 id="power-user">🔧 Power User?<a class="headerlink" href="#power-user" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Customize</strong>: Adapt templates in <code>prompts/</code> for your needs</li>
+<li><strong>Extend</strong>: Explore additional utilities in <code>sources/</code></li>
+<li><strong>Build Custom</strong>: Use <a href="https://github.com/alirezarezvani/claude-code-skill-factory">Skill Factory</a> to generate proprietary skills</li>
+<li><strong>Add Expertise</strong>: Browse <a href="https://github.com/alirezarezvani/claude-skills">Skills Library</a> for domain packages (marketing, product, engineering)</li>
+<li><strong>Contribute</strong>: Add your own utilities following <code>CONTRIBUTING.md</code></li>
+<li><strong>Automate</strong>: Build custom workflows using the utilities</li>
+</ol>
+<hr />
+<h2 id="updates-maintenance">🚀 Updates &amp; Maintenance<a class="headerlink" href="#updates-maintenance" title="Permanent link">&para;</a></h2>
+<h3 id="automatic-updates">Automatic Updates<a class="headerlink" href="#automatic-updates" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Update all utilities</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>./scripts/update.sh
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Check for updates without applying</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>./scripts/update.sh<span class="w"> </span>--check
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># Update specific components</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>./scripts/update.sh<span class="w"> </span>--commands-only
+</span></code></pre></div>
+<h3 id="stay-current">Stay Current<a class="headerlink" href="#stay-current" title="Permanent link">&para;</a></h3>
+<ul>
+<li>⭐ <strong>Star this repository</strong> to get notified of updates</li>
+<li>👀 <strong>Watch releases</strong> for new features and utilities</li>
+<li>📢 <strong>Join discussions</strong> to suggest improvements</li>
+<li>🤝 <strong>Contribute</strong> your own utilities and improvements</li>
+</ul>
+<hr />
+<h2 id="contributing">🤝 Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
+<p>We welcome contributions from the community! Here's how to get involved:</p>
+<h3 id="quick-contributions">Quick Contributions<a class="headerlink" href="#quick-contributions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🐛 <strong>Report bugs</strong> in GitHub Issues</li>
+<li>💡 <strong>Suggest features</strong> in GitHub Discussions</li>
+<li>📖 <strong>Improve documentation</strong> with clarifications</li>
+<li>⭐ <strong>Share your experience</strong> with others</li>
+</ul>
+<h3 id="code-contributions">Code Contributions<a class="headerlink" href="#code-contributions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🔧 <strong>Add new utilities</strong> following our standards</li>
+<li>🎨 <strong>Improve existing code</strong> with enhancements</li>
+<li>🧪 <strong>Add test coverage</strong> for utilities</li>
+<li>📚 <strong>Create examples</strong> for complex workflows</li>
+</ul>
+<h3 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Fork</strong> the repository</li>
+<li><strong>Create</strong> a feature branch: <code>git checkout -b feature/amazing-utility</code></li>
+<li><strong>Follow</strong> our standards in <code>standards/</code> directory</li>
+<li><strong>Test</strong> your changes thoroughly</li>
+<li><strong>Submit</strong> a pull request using our template</li>
+</ol>
+<p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for detailed guidelines.</p>
+<hr />
+<h2 id="project-stats">📊 Project Stats<a class="headerlink" href="#project-stats" title="Permanent link">&para;</a></h2>
+<p><strong>This Repository:</strong>
+- <strong>✨ Skills</strong>: 8 autonomous background helpers (v2.0+)
+- <strong>🤖 Agents</strong>: 133 total (8 core + 125 specialized) organized by team (v2.5+)
+- <strong>⚡ Commands</strong>: 19 total (4 dev + 5 workflow + 10 orchestration) (v2.7+)
+  - <strong>Development</strong>: scaffold, review, test-gen, docs-gen
+  - <strong>Workflow</strong>: prompt-create, prompt-run, todo-add, todo-check, handoff-create
+  - <strong>Orchestration</strong>: audit, vulnerability-scan, compliance-check, profile, benchmark, deploy-validate, health-check, incident-response, code-health, debt-analysis
+- <strong>📝 Prompt Templates</strong>: 20+ battle-tested prompts
+- <strong>📏 Standards</strong>: 5 comprehensive style guides
+- <strong>💡 Examples</strong>: 10+ real-world workflows
+- <strong>📦 Source Library</strong>: 200+ additional components
+- <strong>⏱️ Installation Time</strong>: &lt; 2 minutes
+- <strong>📈 Version</strong>: 2.7.0 (Major update: Orchestration Commands!)</p>
+<p><strong>Complete Ecosystem:</strong>
+- <strong>🏭 <a href="https://github.com/alirezarezvani/claude-code-skill-factory">Skill Factory</a></strong>: Generate unlimited custom skills and agents
+- <strong>📚 <a href="https://github.com/alirezarezvani/claude-skills">Skills Library</a></strong>: 26+ pre-built professional domain packages (Marketing, Product, Engineering, PM, C-Level)
+- <strong>🔄 Active Development</strong>: All three repositories continuously updated
+- <strong>⚖️ License</strong>: MIT across all projects</p>
+<hr />
+<h2 id="success-stories">🏆 Success Stories<a class="headerlink" href="#success-stories" title="Permanent link">&para;</a></h2>
+<h3 id="individual-developers">Individual Developers<a class="headerlink" href="#individual-developers" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>"Claude Code Tresor cut my React setup time from hours to minutes. The testing utilities alone saved me weeks of work!"</em> - Sarah K., Frontend Developer</p>
+</blockquote>
+<h3 id="development-teams">Development Teams<a class="headerlink" href="#development-teams" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>"Our code quality improved dramatically after implementing the standards and review workflows. PRs are now focused on logic, not style."</em> - Mike R., Tech Lead</p>
+</blockquote>
+<h3 id="agencies-consultancies">Agencies &amp; Consultancies<a class="headerlink" href="#agencies-consultancies" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>"We use Claude Code Tresor as our standard toolkit. It ensures consistency across all client projects and speeds up delivery."</em> - Jennifer L., CTO</p>
+</blockquote>
+<hr />
+<h2 id="license-usage">📄 License &amp; Usage<a class="headerlink" href="#license-usage" title="Permanent link">&para;</a></h2>
+<p>This project is licensed under the <strong>MIT License</strong> - see <a href="LICENSE">LICENSE</a> for details.</p>
+<h3 id="you-can">You Can:<a class="headerlink" href="#you-can" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Use for commercial and personal projects</li>
+<li>✅ Modify and distribute</li>
+<li>✅ Create derivative works</li>
+<li>✅ Include in proprietary software</li>
+</ul>
+<h3 id="requirements">Requirements:<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📄 Include copyright notice and license</li>
+<li>🏷️ Credit original author when sharing</li>
+</ul>
+<hr />
+<h2 id="acknowledgments">🙏 Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Claude Code Team</strong>: For creating an amazing development platform</li>
+<li><strong>Open Source Community</strong>: For inspiration and best practices</li>
+<li><strong>Contributors</strong>: Everyone who has helped improve these utilities</li>
+<li><strong>Users</strong>: For feedback and real-world testing</li>
+</ul>
+<p>Special thanks to developers worldwide who believe in sharing knowledge and tools to make development better for everyone.</p>
+<hr />
+<h2 id="support-community">📞 Support &amp; Community<a class="headerlink" href="#support-community" title="Permanent link">&para;</a></h2>
+<h3 id="get-help">Get Help<a class="headerlink" href="#get-help" title="Permanent link">&para;</a></h3>
+<ul>
+<li>📋 <strong>Issues</strong>: <a href="https://github.com/alirezarezvani/claude-code-tresor/issues">GitHub Issues</a> for bugs and feature requests</li>
+<li>💬 <strong>Discussions</strong>: <a href="https://github.com/alirezarezvani/claude-code-tresor/discussions">GitHub Discussions</a> for questions and ideas</li>
+<li>📖 <strong>Documentation</strong>: Browse <code>examples/</code> directory for detailed guides</li>
+<li>🔍 <strong>Search</strong>: Use repository search to find specific utilities</li>
+</ul>
+<h3 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🐦 <strong>Twitter</strong>: <a href="https://twitter.com/alirezarezvani">@alirezarezvani</a></li>
+<li>💼 <strong>LinkedIn</strong>: <a href="https://linkedin.com/in/alirezarezvani">Alireza Rezvani</a></li>
+<li>🌐 <strong>Website</strong>: [https://alirezarezvani.com] (Portfolio Website)</li>
+<li>🌐 <strong>Claude Code Tutorials and Guides</strong>: [https://medium.com/@alirezarezvani] (Medium Blog)</li>
+</ul>
+<h3 id="professional-support">Professional Support<a class="headerlink" href="#professional-support" title="Permanent link">&para;</a></h3>
+<p>For professional support, custom utilities, or team training:
+- 📧 <strong>Email</strong>: [Your professional email]
+- 💼 <strong>Consulting</strong>: Available for custom development and team training</p>
+<hr />
+<h2 id="star-history">⭐ Star History<a class="headerlink" href="#star-history" title="Permanent link">&para;</a></h2>
+<p>If you find Claude Code Tresor valuable, please consider starring the repository! It helps others discover these utilities and motivates continued development.</p>
+<p><a href="https://star-history.com/#alirezarezvani/claude-code-tresor&amp;Date"><img alt="Star History Chart" src="https://api.star-history.com/svg?repos=alirezarezvani/claude-code-tresor&amp;type=Date" /></a></p>
+<hr />
+<div align="center">
+
+**Made with ❤️ by [Alireza Rezvani](https://github.com/alirezarezvani)**
+
+*Empowering developers with world-class Claude Code utilities*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Code Quality](https://img.shields.io/badge/Code%20Quality-A+-brightgreen.svg)](standards/)
+
+**🚀 [Get Started Now](#-quick-start) | 📚 [View Examples](examples/) | 🤝 [Contribute](CONTRIBUTING.md)**
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3501 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="World-class collection of Claude Code utilities — autonomous skills, expert agents, slash commands, and prompts for development workflows.">
+      
+      
+      
+        <link rel="canonical" href="https://smartmur.github.io/claude-code-tresor/guides/workflow/">
+      
+      
+        <link rel="prev" href="../../reference/faq/">
+      
+      
+        <link rel="next" href="../contributing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/smartmur-logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Workflow Guide - Claude Code Tresor</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tresor-workflow-framework-complete-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Claude Code Tresor" class="md-header__button md-logo" aria-label="Claude Code Tresor" data-md-component="logo">
+      
+  <img src="../../assets/smartmur-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Claude Code Tresor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workflow Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SmartMur/claude-code-tresor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SmartMur/claude-code-tresor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agents/" class="md-tabs__link">
+          
+  
+  
+  Agents
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../commands/" class="md-tabs__link">
+          
+  
+  
+  Commands
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/agents/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../workflows/agent-skill-integration/" class="md-tabs__link">
+          
+  
+  
+  Workflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../releases/changelog/" class="md-tabs__link">
+          
+  
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Claude Code Tresor" class="md-nav__button md-logo" aria-label="Claude Code Tresor" data-md-component="logo">
+      
+  <img src="../../assets/smartmur-logo.svg" alt="logo">
+
+    </a>
+    Claude Code Tresor
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SmartMur/claude-code-tresor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SmartMur/claude-code-tresor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/systems-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems Architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/security-auditor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Auditor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/test-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/refactor-expert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Refactor Expert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/performance-tuner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Tuner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/docs-writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs Writer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/config-safety-reviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Safety Reviewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents/root-cause-analyzer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Root Cause Analyzer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skills Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/technical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/agent-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Library Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-tresor-workflow-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What is Tresor Workflow Framework?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Framework Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Framework Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-workflow-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Workflow Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Command Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Command Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prompt-create-meta-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. /prompt-create - Meta-Prompting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-prompt-run-prompt-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. /prompt-run - Prompt Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-todo-add-capture-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. /todo-add - Capture Ideas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-todo-check-resume-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. /todo-check - Resume Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-handoff-create-session-handoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. /handoff-create - Session Handoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Workflow Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Workflow Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-complex-feature-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Complex Feature Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-todo-driven-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Todo-Driven Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-research-prompt-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Research → Prompt → Execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-sequential-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Sequential Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-exploration-capture-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Exploration → Capture → Execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-prompt-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use /prompt-create
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-parallel-vs-sequential-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Parallel vs Sequential Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-todo-add-vs-handoff-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use /todo-add vs /handoff-create
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-tresor-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Integration with Tresor Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Integration with Tresor Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agents-133-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agents (133 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-8-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills (8 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands-4-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Commands (4 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Performance Tips
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimize-token-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimize Token Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-up-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed Up Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improve-context-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improve Context Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-agent-suggestions-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue: Agent suggestions not appearing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-parallel-execution-runs-sequentially" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue: Parallel execution runs sequentially
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-prompts-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue: Prompts not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Reference Card
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/agent-skill-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent-Skill Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/git-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/github-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Releases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/v2.7.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2.7.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/v2.6.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2.6.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/v2.5.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2.5.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-tresor-workflow-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What is Tresor Workflow Framework?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Framework Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Framework Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-workflow-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Workflow Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Command Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Command Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prompt-create-meta-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. /prompt-create - Meta-Prompting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-prompt-run-prompt-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. /prompt-run - Prompt Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-todo-add-capture-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. /todo-add - Capture Ideas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-todo-check-resume-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. /todo-check - Resume Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-handoff-create-session-handoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. /handoff-create - Session Handoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Workflow Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Workflow Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-complex-feature-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Complex Feature Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-todo-driven-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Todo-Driven Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-research-prompt-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Research → Prompt → Execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-sequential-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Sequential Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-exploration-capture-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Exploration → Capture → Execute
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-prompt-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use /prompt-create
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-parallel-vs-sequential-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Parallel vs Sequential Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-todo-add-vs-handoff-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use /todo-add vs /handoff-create
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-tresor-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Integration with Tresor Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Integration with Tresor Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agents-133-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agents (133 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-8-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills (8 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-commands-4-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Commands (4 Total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Performance Tips
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimize-token-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimize Token Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-up-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed Up Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improve-context-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improve Context Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-agent-suggestions-not-appearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue: Agent suggestions not appearing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-parallel-execution-runs-sequentially" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue: Parallel execution runs sequentially
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-prompts-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue: Prompts not found
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Reference Card
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tresor-workflow-framework-complete-guide">Tresor Workflow Framework - Complete Guide<a class="headerlink" href="#tresor-workflow-framework-complete-guide" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Advanced workflow management system for complex development tasks</p>
+</blockquote>
+<p><strong>Version:</strong> 2.7.0
+<strong>Last Updated:</strong> November 19, 2025</p>
+<hr />
+<h2 id="what-is-tresor-workflow-framework">🎯 What is Tresor Workflow Framework?<a class="headerlink" href="#what-is-tresor-workflow-framework" title="Permanent link">&para;</a></h2>
+<p>Tresor Workflow Framework is an integrated system of 5 slash commands that work together to handle:
+- <strong>Meta-prompting</strong> - Generate and execute optimized prompts for complex tasks
+- <strong>Todo management</strong> - Capture ideas and resume work without losing context
+- <strong>Context handoff</strong> - Seamlessly continue work across sessions</p>
+<p><strong>Key Features:</strong>
+- ✅ Automatic agent detection and suggestions (uses all 133 Tresor agents)
+- ✅ Fresh sub-agent contexts for parallel/sequential execution
+- ✅ Structured todo format with full conversation context
+- ✅ Comprehensive session handoff for zero information loss</p>
+<hr />
+<h2 id="framework-components">📦 Framework Components<a class="headerlink" href="#framework-components" title="Permanent link">&para;</a></h2>
+<h3 id="5-workflow-commands">5 Workflow Commands<a class="headerlink" href="#5-workflow-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/prompt-create</code></strong></td>
+<td>Generate optimized prompts</td>
+<td>Complex tasks requiring expert prompts</td>
+</tr>
+<tr>
+<td><strong><code>/prompt-run</code></strong></td>
+<td>Execute prompts in sub-agents</td>
+<td>Running generated prompts (parallel/sequential)</td>
+</tr>
+<tr>
+<td><strong><code>/todo-add</code></strong></td>
+<td>Capture ideas with context</td>
+<td>Spotting issues mid-conversation</td>
+</tr>
+<tr>
+<td><strong><code>/todo-check</code></strong></td>
+<td>Resume work on todos</td>
+<td>Reviewing and selecting todos to work on</td>
+</tr>
+<tr>
+<td><strong><code>/handoff-create</code></strong></td>
+<td>Create session handoff</td>
+<td>Pausing work or context getting full</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="command-details">🚀 Command Details<a class="headerlink" href="#command-details" title="Permanent link">&para;</a></h2>
+<h3 id="1-prompt-create-meta-prompting">1. <code>/prompt-create</code> - Meta-Prompting<a class="headerlink" href="#1-prompt-create-meta-prompting" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Generate expert-level prompts optimized for Claude Code.</p>
+<p><strong>Usage:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/prompt-create<span class="w"> </span><span class="o">[</span>task<span class="w"> </span>description<span class="o">]</span>
+</span></code></pre></div></p>
+<p><strong>What It Does:</strong>
+1. Analyzes your task to determine complexity and optimal structure
+2. Reads <code>CLAUDE.md</code> to understand project-specific standards
+3. Suggests appropriate Tresor agents based on task type
+4. Generates XML-structured prompt with:
+   - Clear objectives and context
+   - Specific requirements and constraints
+   - Verification and success criteria
+5. Saves to <code>./prompts/[number]-[name].md</code>
+6. Offers to run the prompt immediately or save for later</p>
+<p><strong>Example:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/prompt-create<span class="w"> </span>Design<span class="w"> </span>scalable<span class="w"> </span>microservices<span class="w"> </span>architecture<span class="w"> </span><span class="k">for</span><span class="w"> </span>e-commerce<span class="w"> </span>platform<span class="w"> </span>with<span class="w"> </span>100k<span class="w"> </span>users
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Output:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># ✓ Saved prompt to ./prompts/001-microservices-architecture.md</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">#</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># This prompt suggests invoking:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># - @systems-architect (primary)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># - @backend-architect</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># - @cloud-architect</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">#</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># What&#39;s next?</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># 1. Run prompt now</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># 2. Review/edit prompt first</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># 3. Save for later</span>
+</span></code></pre></div></p>
+<p><strong>Best For:</strong>
+- Complex architectural decisions
+- Multi-step implementation tasks
+- Tasks requiring expert-level prompts
+- Work that benefits from structured planning</p>
+<p><strong>Integration:</strong>
+- References Tresor's <code>CLAUDE.md</code> for project standards
+- Suggests agents from <code>subagents/AGENT-INDEX.md</code>
+- Follows anti-overengineering principles
+- Includes maintainability constraints (300 line limit, file economy)</p>
+<hr />
+<h3 id="2-prompt-run-prompt-execution">2. <code>/prompt-run</code> - Prompt Execution<a class="headerlink" href="#2-prompt-run-prompt-execution" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Execute generated prompts in fresh sub-agent contexts.</p>
+<p><strong>Usage:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Run single prompt</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/prompt-run<span class="w"> </span><span class="o">[</span>number<span class="o">]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Run most recent prompt</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>/prompt-run
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Run multiple prompts in parallel</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>/prompt-run<span class="w"> </span><span class="m">001</span><span class="w"> </span><span class="m">002</span><span class="w"> </span><span class="m">003</span><span class="w"> </span>--parallel
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Run multiple prompts sequentially</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>/prompt-run<span class="w"> </span><span class="m">001</span><span class="w"> </span><span class="m">002</span><span class="w"> </span><span class="m">003</span><span class="w"> </span>--sequential
+</span></code></pre></div></p>
+<p><strong>What It Does:</strong>
+1. Reads prompt(s) from <code>./prompts/</code> directory
+2. Launches sub-agent(s) with fresh context
+3. <strong>Parallel mode:</strong> All agents run simultaneously (single message with multiple Task calls)
+4. <strong>Sequential mode:</strong> Agents run one after another (waits for completion before next)
+5. Archives completed prompts to <code>./prompts/completed/</code>
+6. Returns consolidated results</p>
+<p><strong>Example:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Parallel execution (independent tasks)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/prompt-run<span class="w"> </span><span class="m">001</span><span class="w"> </span><span class="m">002</span><span class="w"> </span><span class="m">003</span><span class="w"> </span>--parallel
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Output:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># ✓ Executed in PARALLEL:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#   - ./prompts/001-setup-auth.md</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#   - ./prompts/002-setup-api.md</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#   - ./prompts/003-setup-ui.md</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># ✓ All archived to ./prompts/completed/</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1">#</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1"># Results:</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># - Auth module: JWT implementation complete</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># - API endpoints: 15 endpoints created</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># - UI components: 8 components scaffolded</span>
+</span></code></pre></div></p>
+<p><strong>Best For:</strong>
+- Executing complex multi-step workflows
+- Parallel execution of independent modules
+- Sequential execution of dependent tasks
+- Keeping main conversation lean (fresh sub-agent contexts)</p>
+<p><strong>Parallel vs Sequential:</strong></p>
+<p><strong>Use Parallel When:</strong>
+- Tasks are independent (no shared files)
+- No data dependencies between tasks
+- Want maximum speed</p>
+<p><strong>Use Sequential When:</strong>
+- Tasks depend on each other
+- Shared file modifications
+- One task needs output from previous task</p>
+<hr />
+<h3 id="3-todo-add-capture-ideas">3. <code>/todo-add</code> - Capture Ideas<a class="headerlink" href="#3-todo-add-capture-ideas" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Capture issues, ideas, and tasks without breaking flow.</p>
+<p><strong>Usage:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># With explicit description</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>/todo-add<span class="w"> </span><span class="o">[</span>description<span class="o">]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Infer from conversation</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>/todo-add
+</span></code></pre></div></p>
+<p><strong>What It Does:</strong>
+1. Reads <code>TO-DOS.md</code> (creates if doesn't exist)
+2. Checks for duplicates
+3. Extracts context from conversation:
+   - Problem or task description
+   - Relevant file paths with line numbers
+   - Technical details (errors, conflicts, root cause)
+4. Appends structured todo with timestamp
+5. Confirms and offers to continue original work</p>
+<p><strong>Structured Format:</strong>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gu">## Context Title - 2025-11-19 14:23</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">-</span><span class="w"> </span><span class="gs">**[Action] [Component]**</span> - Brief description. <span class="gs">**Problem:**</span> What&#39;s wrong/why needed. <span class="gs">**Files:**</span> path/to/file.ts:123-145, path/to/file2.py:67. <span class="gs">**Solution:**</span> Approach hints (optional).
+</span></code></pre></div></p>
+<p><strong>Example:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># During code review, spot issue</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>/todo-add<span class="w"> </span>Fix<span class="w"> </span>N+1<span class="w"> </span>query<span class="w"> </span><span class="k">in</span><span class="w"> </span>user<span class="w"> </span>API
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Output:</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># ✓ Saved to TO-DOS.md</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">#</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Added:</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># ## Fix Database Query - 2025-11-19 14:23</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># - **Optimize N+1 queries in user API** - Multiple database queries in loop causing performance degradation. **Problem:** Each user fetch triggers separate query for profile data. **Files:** src/api/users.ts:45-67. **Solution:** Use JOIN or eager loading.</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">#</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1"># Would you like to continue with [previous task]?</span>
+</span></code></pre></div></p>
+<p><strong>Best For:</strong>
+- Spotting issues during code review
+- Capturing improvement ideas mid-conversation
+- Noting technical debt for later
+- Quick context capture without derailing current work</p>
+<p><strong>Integration:</strong>
+- Auto-detects Tresor components (agents, skills, commands)
+- Preserves full conversation context
+- Structured format for easy resumption</p>
+<hr />
+<h3 id="4-todo-check-resume-work">4. <code>/todo-check</code> - Resume Work<a class="headerlink" href="#4-todo-check-resume-work" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Review todos and resume work with complete context.</p>
+<p><strong>Usage:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/todo-check
+</span></code></pre></div></p>
+<p><strong>What It Does:</strong>
+1. Reads <code>TO-DOS.md</code>
+2. Displays compact numbered list (title + date)
+3. User selects a todo
+4. Loads full context:
+   - Complete todo description (Problem, Files, Solution)
+   - Section heading for additional context
+   - Brief summary of relevant files
+5. <strong>Detects Tresor agents</strong> based on:
+   - File paths (e.g., <code>api/</code> → backend agents)
+   - Todo content keywords (e.g., "database" → @database-optimizer)
+   - Domain patterns (e.g., <code>ui/</code> → @ui-designer)
+6. Offers action options:
+   - Invoke suggested agent and start
+   - Invoke relevant skill (if applicable)
+   - Work on it directly
+   - Brainstorm approach first
+   - Put it back and browse other todos</p>
+<p><strong>Example:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/todo-check
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Output:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Outstanding Todos:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">#</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># 1. Optimize N+1 queries in user API (2025-11-19 14:23)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># 2. Add GDPR consent flow (2025-11-18 10:15)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># 3. Refactor auth module (2025-11-17 09:30)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1">#</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Reply with the number of the todo you&#39;d like to work on.</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c1"># User selects: 1</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="c1"># Output:</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="c1"># ## Fix Database Query - 2025-11-19 14:23</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="c1"># - **Optimize N+1 queries in user API** - Multiple database queries in loop causing performance degradation. **Problem:** Each user fetch triggers separate query for profile data. **Files:** src/api/users.ts:45-67. **Solution:** Use JOIN or eager loading.</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="c1">#</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="c1"># File Summary:</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="c1"># - src/api/users.ts: Express route handlers for user endpoints</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="c1">#</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="c1"># This looks like database/backend work. Would you like to:</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="c1">#</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="c1"># 1. Invoke @database-optimizer and start</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="c1"># 2. Invoke @performance-tuner and start</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="c1"># 3. Work on it directly</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="c1"># 4. Brainstorm approach first</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="c1"># 5. Put it back and browse other todos</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="c1">#</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="c1"># Reply with the number of your choice.</span>
+</span></code></pre></div></p>
+<p><strong>Best For:</strong>
+- Resuming work after breaks
+- Reviewing accumulated technical debt
+- Getting agent suggestions for captured issues
+- Maintaining context across sessions</p>
+<p><strong>Agent Detection Patterns:</strong>
+- <strong>Database files</strong> (<code>db/</code>, <code>migrations/</code>, <code>*.sql</code>) → @database-optimizer, @sql-pro
+- <strong>API files</strong> (<code>api/</code>, <code>routes/</code>, <code>controllers/</code>) → @backend-architect, @api-documenter
+- <strong>Frontend files</strong> (<code>components/</code>, <code>ui/</code>, <code>*.jsx</code>) → @frontend-developer, @ui-designer
+- <strong>Security keywords</strong> ("auth", "security", "vulnerability") → @security-auditor
+- <strong>Performance keywords</strong> ("slow", "optimize", "performance") → @performance-tuner
+- <strong>Testing files</strong> (<code>__tests__/</code>, <code>*.test.ts</code>) → @test-engineer</p>
+<p><strong>See:</strong> <a href="subagents/AGENT-INDEX.md">Complete agent list</a> for all 133 detectable agents.</p>
+<hr />
+<h3 id="5-handoff-create-session-handoff">5. <code>/handoff-create</code> - Session Handoff<a class="headerlink" href="#5-handoff-create-session-handoff" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create comprehensive handoff document for work continuation.</p>
+<p><strong>Usage:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/handoff-create
+</span></code></pre></div></p>
+<p><strong>What It Does:</strong>
+1. Analyzes entire conversation history
+2. Captures comprehensive context:
+   - <strong>Original task:</strong> What was initially requested
+   - <strong>Work completed:</strong> All artifacts, changes, actions, findings, decisions
+   - <strong>Work remaining:</strong> Specific next steps with locations and dependencies
+   - <strong>Attempted approaches:</strong> What didn't work and why
+   - <strong>Critical context:</strong> Decisions, constraints, discoveries, assumptions
+   - <strong>Current state:</strong> Status of deliverables, temporary changes, open questions
+3. Writes to <code>whats-next.md</code> with XML structure
+4. Enables resumption with <strong>zero information loss</strong></p>
+<p><strong>Example:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># After 2 hours of work on complex feature</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>/handoff-create
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Output:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># ✓ Created comprehensive handoff document: whats-next.md</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">#</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Summary:</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1"># - Original task: Implement user authentication system</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># - Work completed: JWT setup, user model, 3 API endpoints</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1"># - Work remaining: Password reset flow, email verification, tests</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c1"># - Attempted approaches: Tried bcrypt (too slow), switched to argon2</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c1"># - Critical context: Must support OAuth2 later (architecture decision)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># - Current state: 60% complete, API endpoints functional but untested</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1">#</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c1"># Next session: Load whats-next.md to continue exactly where you left off.</span>
+</span></code></pre></div></p>
+<p><strong>Best For:</strong>
+- Pausing complex multi-session work
+- Context approaching token limits
+- Handing off work to another developer
+- Documenting decisions and progress</p>
+<p><strong>Complements Tresor Memory Bank:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Scope</th>
+<th>Updated</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>projectbrief.md</code></td>
+<td>Project</td>
+<td>Rarely</td>
+<td>Vision, goals, taxonomy</td>
+</tr>
+<tr>
+<td><code>productContext.md</code></td>
+<td>Tech stack</td>
+<td>Occasionally</td>
+<td>Architectural decisions, conventions</td>
+</tr>
+<tr>
+<td><code>activeContext.md</code></td>
+<td>Current priorities</td>
+<td>Regularly</td>
+<td>Daily/weekly work tracking</td>
+</tr>
+<tr>
+<td><strong><code>whats-next.md</code></strong></td>
+<td><strong>Session</strong></td>
+<td><strong>Per session</strong></td>
+<td><strong>Detailed task handoff</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Usage Pattern:</strong>
+- Use Tresor Memory Bank for <strong>long-term</strong> project context
+- Use <code>/handoff-create</code> for <strong>session-specific</strong> task handoff
+- Load both in next session for <strong>complete continuity</strong></p>
+<hr />
+<h2 id="workflow-patterns">🔄 Workflow Patterns<a class="headerlink" href="#workflow-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="pattern-1-complex-feature-implementation">Pattern 1: Complex Feature Implementation<a class="headerlink" href="#pattern-1-complex-feature-implementation" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> Building a new feature with multiple components</p>
+<p><strong>Workflow:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Step 1: Generate expert prompts for each component</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>/prompt-create<span class="w"> </span>Implement<span class="w"> </span>user<span class="w"> </span>authentication<span class="w"> </span>backend<span class="w"> </span>API
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>/prompt-create<span class="w"> </span>Implement<span class="w"> </span>user<span class="w"> </span>authentication<span class="w"> </span>frontend<span class="w"> </span>UI
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>/prompt-create<span class="w"> </span>Create<span class="w"> </span>tests<span class="w"> </span><span class="k">for</span><span class="w"> </span>authentication<span class="w"> </span>system
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># Step 2: Execute prompts in parallel (independent components)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>/prompt-run<span class="w"> </span><span class="m">001</span><span class="w"> </span><span class="m">002</span><span class="w"> </span><span class="m">003</span><span class="w"> </span>--parallel
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1"># Step 3: If work spans multiple sessions</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>/handoff-create
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1"># Step 4 (next session): Load context and continue</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c1"># [Load whats-next.md]</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>/prompt-run<span class="w"> </span><span class="m">004</span><span class="w">  </span><span class="c1"># Continue with remaining prompts</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- Parallel execution speeds up implementation
+- Fresh contexts prevent token limit issues
+- Complete handoff ensures no information loss</p>
+<hr />
+<h3 id="pattern-2-todo-driven-development">Pattern 2: Todo-Driven Development<a class="headerlink" href="#pattern-2-todo-driven-development" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> Accumulating technical debt and improvement ideas</p>
+<p><strong>Workflow:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># During code review</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>/todo-add<span class="w"> </span>Fix<span class="w"> </span>N+1<span class="w"> </span>query<span class="w"> </span><span class="k">in</span><span class="w"> </span>user<span class="w"> </span>API
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># During feature work</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>/todo-add<span class="w"> </span>Add<span class="w"> </span>error<span class="w"> </span>handling<span class="w"> </span>to<span class="w"> </span>payment<span class="w"> </span>processor
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># During security audit</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>/todo-add<span class="w"> </span>Implement<span class="w"> </span>rate<span class="w"> </span>limiting<span class="w"> </span>on<span class="w"> </span>login<span class="w"> </span>endpoint
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Later: Review and work on todos</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>/todo-check
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c1"># → Select todo #1</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1"># → System suggests @database-optimizer</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="c1"># → Invoke agent and fix issue</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- Capture issues without breaking flow
+- Agent suggestions speed up issue resolution
+- Structured format ensures complete context</p>
+<hr />
+<h3 id="pattern-3-research-prompt-execute">Pattern 3: Research → Prompt → Execute<a class="headerlink" href="#pattern-3-research-prompt-execute" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> Complex task requiring research and planning</p>
+<p><strong>Workflow:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Step 1: Capture initial idea</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>/todo-add<span class="w"> </span>Research<span class="w"> </span>microservices<span class="w"> </span>migration<span class="w"> </span>strategy
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Step 2: When ready, generate expert prompt</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>/prompt-create<span class="w"> </span>Design<span class="w"> </span>microservices<span class="w"> </span>migration<span class="w"> </span><span class="k">for</span><span class="w"> </span>monolithic<span class="w"> </span>e-commerce<span class="w"> </span>app
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1"># → Prompt suggests: @systems-architect, @backend-architect, @cloud-architect</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># Step 3: Execute prompt with suggested agents</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>/prompt-run<span class="w"> </span><span class="m">001</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># → Sub-agent invokes @systems-architect for comprehensive analysis</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="c1"># Step 4: If research reveals multiple implementation paths</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>/prompt-create<span class="w"> </span>Implement<span class="w"> </span>service<span class="w"> </span>A<span class="w"> </span><span class="o">(</span>user<span class="w"> </span>service<span class="o">)</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>/prompt-create<span class="w"> </span>Implement<span class="w"> </span>service<span class="w"> </span>B<span class="w"> </span><span class="o">(</span>order<span class="w"> </span>service<span class="o">)</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>/prompt-create<span class="w"> </span>Implement<span class="w"> </span>service<span class="w"> </span>C<span class="w"> </span><span class="o">(</span>payment<span class="w"> </span>service<span class="o">)</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="c1"># Step 5: Execute in parallel</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>/prompt-run<span class="w"> </span><span class="m">002</span><span class="w"> </span><span class="m">003</span><span class="w"> </span><span class="m">004</span><span class="w"> </span>--parallel
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="c1"># Step 6: If work extends over multiple days</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>/handoff-create
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="c1"># → Next session: Load and continue</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- Structured approach to complex problems
+- Expert prompts ensure thoroughness
+- Parallel execution for speed
+- Handoff for multi-day work</p>
+<hr />
+<h3 id="pattern-4-sequential-pipeline">Pattern 4: Sequential Pipeline<a class="headerlink" href="#pattern-4-sequential-pipeline" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> Tasks with dependencies (must run in order)</p>
+<p><strong>Workflow:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Step 1: Generate prompts for sequential pipeline</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>/prompt-create<span class="w"> </span>Setup<span class="w"> </span>database<span class="w"> </span>schema<span class="w"> </span>and<span class="w"> </span>migrations
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>/prompt-create<span class="w"> </span>Create<span class="w"> </span>API<span class="w"> </span>endpoints<span class="w"> </span>using<span class="w"> </span>schema
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>/prompt-create<span class="w"> </span>Build<span class="w"> </span>UI<span class="w"> </span>components<span class="w"> </span>consuming<span class="w"> </span>API
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>/prompt-create<span class="w"> </span>Write<span class="w"> </span>end-to-end<span class="w"> </span>tests
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># Step 2: Execute sequentially (each depends on previous)</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>/prompt-run<span class="w"> </span><span class="m">001</span><span class="w"> </span><span class="m">002</span><span class="w"> </span><span class="m">003</span><span class="w"> </span><span class="m">004</span><span class="w"> </span>--sequential
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1"># → 001 completes → 002 starts → 002 completes → 003 starts → etc.</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="c1"># Benefits:</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c1"># - Correct execution order enforced</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># - Each step has full context from previous step</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c1"># - Single command handles entire pipeline</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- Enforces correct dependency order
+- Each step builds on previous step's output
+- Single command orchestrates entire pipeline</p>
+<hr />
+<h3 id="pattern-5-exploration-capture-execute">Pattern 5: Exploration → Capture → Execute<a class="headerlink" href="#pattern-5-exploration-capture-execute" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> Exploring codebase and finding improvements</p>
+<p><strong>Workflow:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># While exploring codebase</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1"># [Reading files, understanding architecture]</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>/todo-add<span class="w"> </span>Database<span class="w"> </span>queries<span class="w"> </span>not<span class="w"> </span>indexed<span class="w"> </span>-<span class="w"> </span>users<span class="w"> </span>table
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>/todo-add<span class="w"> </span>Unused<span class="w"> </span>imports<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">12</span><span class="w"> </span>files<span class="w"> </span>-<span class="w"> </span>cleanup<span class="w"> </span>needed
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>/todo-add<span class="w"> </span>Missing<span class="w"> </span>error<span class="w"> </span>logging<span class="w"> </span><span class="k">in</span><span class="w"> </span>payment<span class="w"> </span>flow
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># Later: Batch review todos</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>/todo-check
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c1"># → See all captured improvements</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="c1"># → Select and fix systematically</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- Capture discoveries without losing exploration flow
+- Batch-fix similar issues
+- Systematic debt reduction</p>
+<hr />
+<h2 id="best-practices">🎯 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="when-to-use-prompt-create">When to Use <code>/prompt-create</code><a class="headerlink" href="#when-to-use-prompt-create" title="Permanent link">&para;</a></h3>
+<p><strong>✅ Use when:</strong>
+- Task is complex and benefits from expert prompting
+- Need structured approach with clear objectives
+- Want to leverage Tresor's 133-agent ecosystem
+- Task requires specific constraints or validation</p>
+<p><strong>❌ Don't use when:</strong>
+- Task is trivial (just do it directly)
+- You already know exactly what to do
+- Single-line code change</p>
+<h3 id="when-to-use-parallel-vs-sequential-execution">When to Use Parallel vs Sequential Execution<a class="headerlink" href="#when-to-use-parallel-vs-sequential-execution" title="Permanent link">&para;</a></h3>
+<p><strong>Parallel (<code>--parallel</code>):</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>✅<span class="w"> </span>Independent<span class="w"> </span>modules<span class="w"> </span><span class="o">(</span>auth,<span class="w"> </span>API,<span class="w"> </span>UI<span class="o">)</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>✅<span class="w"> </span>No<span class="w"> </span>shared<span class="w"> </span>file<span class="w"> </span>modifications
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>✅<span class="w"> </span>No<span class="w"> </span>data<span class="w"> </span>dependencies
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>✅<span class="w"> </span>Want<span class="w"> </span>maximum<span class="w"> </span>speed
+</span></code></pre></div></p>
+<p><strong>Sequential (<code>--sequential</code>):</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>✅<span class="w"> </span>Tasks<span class="w"> </span>depend<span class="w"> </span>on<span class="w"> </span>each<span class="w"> </span>other
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>✅<span class="w"> </span>Shared<span class="w"> </span>file<span class="w"> </span>modifications
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>✅<span class="w"> </span>One<span class="w"> </span>needs<span class="w"> </span>output<span class="w"> </span>from<span class="w"> </span>previous
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>✅<span class="w"> </span>Pipeline<span class="w"> </span>workflows<span class="w"> </span><span class="o">(</span>setup<span class="w"> </span>→<span class="w"> </span>build<span class="w"> </span>→<span class="w"> </span><span class="nb">test</span><span class="o">)</span>
+</span></code></pre></div></p>
+<h3 id="when-to-use-todo-add-vs-handoff-create">When to Use <code>/todo-add</code> vs <code>/handoff-create</code><a class="headerlink" href="#when-to-use-todo-add-vs-handoff-create" title="Permanent link">&para;</a></h3>
+<p><strong><code>/todo-add</code>:</strong>
+- Quick captures (&lt; 5 minutes per issue)
+- Multiple independent improvements
+- Technical debt
+- Future enhancements</p>
+<p><strong><code>/handoff-create</code>:</strong>
+- Complex multi-hour work
+- Session ending
+- Context approaching limits
+- Work handoff to another dev</p>
+<hr />
+<h2 id="integration-with-tresor-ecosystem">🔗 Integration with Tresor Ecosystem<a class="headerlink" href="#integration-with-tresor-ecosystem" title="Permanent link">&para;</a></h2>
+<h3 id="agents-133-total">Agents (133 Total)<a class="headerlink" href="#agents-133-total" title="Permanent link">&para;</a></h3>
+<p>Tresor Workflow Framework automatically detects and suggests agents from:
+- <strong>Core agents</strong> (8): systems-architect, config-safety-reviewer, etc.
+- <strong>Engineering</strong> (54): backend-architect, frontend-developer, database-optimizer, etc.
+- <strong>Design</strong> (7): ui-designer, ux-researcher, etc.
+- <strong>Product</strong> (9): product-manager, product-analyst, etc.
+- <strong>Leadership</strong> (14): cto, vp-engineering, etc.
+- <strong>And 6 more teams</strong> (41 agents)</p>
+<p><strong>See:</strong> <a href="subagents/README.md">Complete Agent Catalog</a></p>
+<h3 id="skills-8-total">Skills (8 Total)<a class="headerlink" href="#skills-8-total" title="Permanent link">&para;</a></h3>
+<p>Skills work alongside workflow commands:
+- <strong>code-reviewer</strong> - Real-time code quality (complements <code>/review</code>)
+- <strong>test-generator</strong> - Auto-suggest tests (complements <code>/test-gen</code>)
+- <strong>security-auditor</strong> - OWASP scanning (complements agent security audits)
+- <strong>And 5 more skills</strong></p>
+<p><strong>See:</strong> <a href="skills/README.md">Skills Guide</a></p>
+<h3 id="other-commands-4-total">Other Commands (4 Total)<a class="headerlink" href="#other-commands-4-total" title="Permanent link">&para;</a></h3>
+<p>Workflow commands complement:
+- <strong><code>/scaffold</code></strong> - Project scaffolding
+- <strong><code>/review</code></strong> - Code review automation
+- <strong><code>/test-gen</code></strong> - Test generation
+- <strong><code>/docs-gen</code></strong> - Documentation generation</p>
+<hr />
+<h2 id="performance-tips">📊 Performance Tips<a class="headerlink" href="#performance-tips" title="Permanent link">&para;</a></h2>
+<h3 id="optimize-token-usage">Optimize Token Usage<a class="headerlink" href="#optimize-token-usage" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Long conversations hit token limits</p>
+<p><strong>Solutions:</strong>
+1. Use <code>/handoff-create</code> to offload context
+2. Execute complex tasks in fresh sub-agent contexts (<code>/prompt-run</code>)
+3. Keep main conversation focused on orchestration</p>
+<h3 id="speed-up-execution">Speed Up Execution<a class="headerlink" href="#speed-up-execution" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Sequential execution is slow</p>
+<p><strong>Solutions:</strong>
+1. Identify independent tasks
+2. Use <code>--parallel</code> flag for simultaneous execution
+3. Break monolithic tasks into parallelizable sub-tasks</p>
+<h3 id="improve-context-quality">Improve Context Quality<a class="headerlink" href="#improve-context-quality" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Resumed work lacks context</p>
+<p><strong>Solutions:</strong>
+1. Use structured todo format (Problem, Files, Solution)
+2. Capture context immediately (don't rely on memory)
+3. Use <code>/handoff-create</code> for comprehensive handoffs</p>
+<hr />
+<h2 id="troubleshooting">🆘 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="issue-agent-suggestions-not-appearing">Issue: Agent suggestions not appearing<a class="headerlink" href="#issue-agent-suggestions-not-appearing" title="Permanent link">&para;</a></h3>
+<p><strong>Cause:</strong> <code>/todo-check</code> can't find <code>subagents/</code> directory</p>
+<p><strong>Solution:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Verify subagents directory exists</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>ls<span class="w"> </span>subagents/
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Reinstall if missing</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>./scripts/install.sh<span class="w"> </span>--agents
+</span></code></pre></div></p>
+<hr />
+<h3 id="issue-parallel-execution-runs-sequentially">Issue: Parallel execution runs sequentially<a class="headerlink" href="#issue-parallel-execution-runs-sequentially" title="Permanent link">&para;</a></h3>
+<p><strong>Cause:</strong> Multiple Task calls not in single message</p>
+<p><strong>Solution:</strong> <code>/prompt-run</code> handles this automatically. If custom implementation:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Wrong (sequential)</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Task<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>prompt<span class="w"> </span><span class="m">001</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="o">[</span><span class="nb">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>response<span class="o">]</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>Task<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>prompt<span class="w"> </span><span class="m">002</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="c1"># Correct (parallel)</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Task<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>prompt<span class="w"> </span><span class="m">001</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>Task<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>prompt<span class="w"> </span><span class="m">002</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Task<span class="w"> </span>tool<span class="w"> </span><span class="k">for</span><span class="w"> </span>prompt<span class="w"> </span><span class="m">003</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="o">[</span>All<span class="w"> </span><span class="k">in</span><span class="w"> </span>single<span class="w"> </span>message<span class="o">]</span>
+</span></code></pre></div></p>
+<hr />
+<h3 id="issue-prompts-not-found">Issue: Prompts not found<a class="headerlink" href="#issue-prompts-not-found" title="Permanent link">&para;</a></h3>
+<p><strong>Cause:</strong> <code>./prompts/</code> directory doesn't exist</p>
+<p><strong>Solution:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Create prompts directory</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>./prompts/
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Regenerate prompt</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>/prompt-create<span class="w"> </span><span class="o">[</span>task<span class="o">]</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="related-documentation">📚 Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><a href="NAVIGATION.md">Navigation Guide</a></strong> - Find your way around Tresor</li>
+<li><strong><a href="MIGRATION.md">Migration Guide</a></strong> - Upgrade from v2.6 or earlier</li>
+<li><strong><a href="subagents/README.md">Agent Catalog</a></strong> - Browse all 133 agents</li>
+<li><strong><a href="documentation/guides/getting-started.md">Getting Started</a></strong> - New user guide</li>
+</ul>
+<hr />
+<h2 id="quick-reference-card">🚀 Quick Reference Card<a class="headerlink" href="#quick-reference-card" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Meta-Prompting</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>/prompt-create<span class="w"> </span><span class="o">[</span>task<span class="o">]</span><span class="w">              </span><span class="c1"># Generate expert prompt</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>/prompt-run<span class="w"> </span><span class="o">[</span>numbers<span class="o">]</span><span class="w"> </span>--parallel<span class="w">   </span><span class="c1"># Execute in parallel</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>/prompt-run<span class="w"> </span><span class="o">[</span>numbers<span class="o">]</span><span class="w"> </span>--sequential<span class="w"> </span><span class="c1"># Execute sequentially</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="c1"># Todo Management</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>/todo-add<span class="w"> </span><span class="o">[</span>description<span class="o">]</span><span class="w">            </span><span class="c1"># Capture idea</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>/todo-check<span class="w">                        </span><span class="c1"># Review &amp; resume todos</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="c1"># Context Handoff</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>/handoff-create<span class="w">                    </span><span class="c1"># Create session handoff</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="c1"># Typical Workflow</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="m">1</span>.<span class="w"> </span>/prompt-create<span class="w"> </span><span class="o">[</span>complex<span class="w"> </span>task<span class="o">]</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="m">2</span>.<span class="w"> </span>/prompt-run<span class="w"> </span><span class="o">[</span>numbers<span class="o">]</span><span class="w"> </span>--parallel
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="m">3</span>.<span class="w"> </span>/todo-add<span class="w"> </span><span class="o">[</span>issues<span class="w"> </span>found<span class="w"> </span>during<span class="w"> </span>work<span class="o">]</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="m">4</span>.<span class="w"> </span>/handoff-create<span class="w"> </span><span class="o">[</span>before<span class="w"> </span>ending<span class="w"> </span>session<span class="o">]</span>
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="m">5</span>.<span class="w"> </span>Next<span class="w"> </span>session:<span class="w"> </span>Load<span class="w"> </span>whats-next.md
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="m">6</span>.<span class="w"> </span>/todo-check<span class="w"> </span><span class="o">[</span>resume<span class="w"> </span>captured<span class="w"> </span>issues<span class="o">]</span>
+</span></code></pre></div>
+<hr />
+<p><strong>Version:</strong> 2.7.0
+<strong>Last Updated:</strong> November 19, 2025
+<strong>License:</strong> MIT
+<strong>Author:</strong> Alireza Rezvani</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
