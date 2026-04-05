@@ -391,7 +391,7 @@ import json
 
 url = "https://api.example.com{endpoint['path']}"
 headers = {{
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": "Bearer <API_KEY>",
     "Content-Type": "application/json",
     "User-Agent": "MyApp/1.0"
 }}
@@ -414,7 +414,7 @@ const apiUrl = 'https://api.example.com{endpoint['path']}';
 const response = await fetch(apiUrl, {{
     method: '{endpoint['method']}',
     headers: {{
-        'Authorization': 'Bearer YOUR_API_KEY',
+        'Authorization': 'Bearer <API_KEY>',
         'Content-Type': 'application/json',
         'User-Agent': 'MyApp/1.0'
     }}
@@ -431,7 +431,7 @@ if (response.ok) {{
     # cURL example
     examples['curl'] = f'''
 curl -X {endpoint['method']} https://api.example.com{endpoint['path']} \\
-    -H "Authorization: Bearer YOUR_API_KEY" \\
+    -H "Authorization: Bearer <API_KEY>" \\
     -H "Content-Type: application/json" \\
     -H "User-Agent: MyApp/1.0" \\
     -w "\\nResponse Code: %{{http_code}}\\nTotal Time: %{{time_total}}s\\n"
@@ -442,7 +442,7 @@ curl -X {endpoint['method']} https://api.example.com{endpoint['path']} \\
 <?php
 $url = 'https://api.example.com{endpoint['path']}';
 $headers = [
-    'Authorization: Bearer YOUR_API_KEY',
+    'Authorization: Bearer <API_KEY>',
     'Content-Type: application/json',
     'User-Agent: MyApp/1.0'
 ];

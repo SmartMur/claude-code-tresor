@@ -181,7 +181,7 @@ app.get('/users/:id', (req, res) => {
 ```javascript
 // You accidentally commit:
 const config = {
-  stripeKey: 'sk_live_51HfG8KLm...',  // ⚠️ DETECTED
+  stripeKey: '<EXAMPLE_STRIPE_KEY>',  // ⚠️ DETECTED
   apiUrl: 'https://api.example.com'
 }
 
