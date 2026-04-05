@@ -6,7 +6,7 @@
 
 ```javascript
 // You type:
-const stripeKey = 'sk_live_1234567890abcdef';
+const stripeKey = '<EXAMPLE_STRIPE_KEY>';
 
 // Instant alert:
 🚨 CRITICAL: Exposed Stripe API key!

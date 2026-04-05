@@ -39,7 +39,7 @@ Brief description of what the API does and its primary purpose.
 
 ```bash
 curl -X GET "https://api.example.com/v1/users" \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Authorization: Bearer <API_KEY>" \
   -H "Content-Type: application/json"
 ```
 
@@ -54,7 +54,7 @@ curl -X GET "https://api.example.com/v1/users" \
 Include your API key in the Authorization header:
 
 ```http
-Authorization: Bearer YOUR_API_KEY
+Authorization: Bearer <API_KEY>
 ```
 
 ### OAuth 2.0 Flow
@@ -111,7 +111,7 @@ X-RateLimit-Reset: 1609459200
 #### Request Headers
 ```http
 Content-Type: application/json
-Authorization: Bearer YOUR_API_KEY
+Authorization: Bearer <API_KEY>
 User-Agent: YourApp/1.0.0
 Accept: application/json
 ```
@@ -166,7 +166,7 @@ GET /v1/users
 **Example Request:**
 ```bash
 curl -X GET "https://api.example.com/v1/users?page=1&limit=10&search=john" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: Bearer <API_KEY>"
 ```
 
 **Example Response:**
@@ -214,7 +214,7 @@ GET /v1/users/{user_id}
 **Example Request:**
 ```bash
 curl -X GET "https://api.example.com/v1/users/user_123" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: Bearer <API_KEY>"
 ```
 
 **Example Response:**
@@ -281,7 +281,7 @@ POST /v1/users
 **Example Request:**
 ```bash
 curl -X POST "https://api.example.com/v1/users" \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Authorization: Bearer <API_KEY>" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Jane Smith",
@@ -388,7 +388,7 @@ GET /v1/products
 **Example Request:**
 ```bash
 curl -X GET "https://api.example.com/v1/products?category=electronics&min_price=100&in_stock=true" \
-  -H "Authorization: Bearer YOUR_API_KEY"
+  -H "Authorization: Bearer <API_KEY>"
 ```
 
 ## 🔧 Data Models
@@ -642,7 +642,7 @@ npm install @example/api-client
 ```javascript
 import { ApiClient } from '@example/api-client';
 
-const client = new ApiClient('YOUR_API_KEY');
+const client = new ApiClient('<API_KEY>');
 const users = await client.users.list();
 ```
 
@@ -654,7 +654,7 @@ pip install example-api-python
 ```python
 from example_api import ApiClient
 
-client = ApiClient('YOUR_API_KEY')
+client = ApiClient('<API_KEY>')
 users = client.users.list()
 ```
 
@@ -666,7 +666,7 @@ composer require example/api-client
 ```php
 use Example\ApiClient;
 
-$client = new ApiClient('YOUR_API_KEY');
+$client = new ApiClient('<API_KEY>');
 $users = $client->users->list();
 ```
 
@@ -888,7 +888,7 @@ GraphQL errors are returned in the `errors` array:
 ```javascript
 const ws = new WebSocket('wss://api.example.com/v1/ws', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY'
+    'Authorization': 'Bearer <API_KEY>'
   }
 });
 ```

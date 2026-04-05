@@ -63,7 +63,7 @@ Get instant feedback without interrupting your flow:
 
 ```javascript
 // You write:
-const apiKey = 'sk_live_1234567890';
+const apiKey = '<EXAMPLE_STRIPE_KEY>';
 
 // Skill alerts:
 🚨 CRITICAL: Hardcoded API key detected (line 1)

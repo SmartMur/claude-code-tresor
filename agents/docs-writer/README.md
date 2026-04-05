@@ -160,7 +160,7 @@ Requires valid JWT token in Authorization header.
 
 ```bash
 curl -X POST "https://api.example.com/api/users/123/profile" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -H "Authorization: Bearer <EXAMPLE_JWT>" \
   -F "name=John Doe" \
   -F "email=john.doe@example.com" \
   -F "bio=Software developer passionate about clean code" \

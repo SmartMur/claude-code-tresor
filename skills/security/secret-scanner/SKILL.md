@@ -49,7 +49,7 @@ Prevent accidental secret exposure in your codebase.
 ### API Key Detection
 ```javascript
 // You type:
-const apiKey = 'sk_live_1234567890abcdef';
+const apiKey = '<EXAMPLE_STRIPE_KEY>';
 
 // I immediately alert:
 🚨 CRITICAL: Exposed Stripe API key detected!
@@ -146,7 +146,7 @@ I check if sensitive files are in .gitignore:
 ### Test Files
 ```javascript
 // Test fixtures are OK (but flagged for review):
-const mockApiKey = 'sk_test_1234567890abcdef';  // ✅ Test key
+const mockApiKey = '<EXAMPLE_STRIPE_TEST_KEY>';  // ✅ Test key
 ```
 
 ### Documentation
@@ -173,13 +173,13 @@ Combined: Complete security picture
 
 ```javascript
 // Before:
-const apiKey = 'sk_live_abc123';
+const apiKey = '<EXAMPLE_STRIPE_KEY>';
 
 // After:
 const apiKey = process.env.API_KEY;
 
 // .env file (add to .gitignore):
-API_KEY=sk_live_abc123
+API_KEY=<EXAMPLE_STRIPE_KEY>
 ```
 
 ### Use Secret Management
@@ -201,7 +201,7 @@ services:
       - API_KEY=${API_KEY}  # From .env file
 
 # .env (gitignored)
-API_KEY=sk_live_abc123
+API_KEY=<EXAMPLE_STRIPE_KEY>
 ```
 
 ## Sandboxing Compatibility
